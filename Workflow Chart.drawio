@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-29T09:30:13.767Z" agent="5.0 (Macintosh)" etag="J3Qe9Ka-oYh9oeu4Rv5P" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-29T09:41:53.873Z" agent="5.0 (Macintosh)" etag="TsN6_BZR7Z-nP-wPR7Uy" version="15.2.7" type="github">
   <diagram name="Page-1" id="edf60f1a-56cd-e834-aa8a-f176f3a09ee4">
-    <mxGraphModel dx="2051" dy="806" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2218" dy="664" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -50,6 +50,9 @@
         <mxCell id="r9l6ygumFsfBTqQ8MOW--66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=16;" edge="1" parent="1" source="r9l6ygumFsfBTqQ8MOW--14" target="r9l6ygumFsfBTqQ8MOW--20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=16;startArrow=none;" edge="1" parent="1" source="r9l6ygumFsfBTqQ8MOW--79" target="r9l6ygumFsfBTqQ8MOW--73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="r9l6ygumFsfBTqQ8MOW--14" value="&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Assembly Quality Assessment&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Input:&amp;nbsp; &lt;/font&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;assemblies and reference gen&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;o&lt;/font&gt;mes in FASTA format&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Output: K mer stats, reads stats, metrics&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&amp;nbsp;related to assembly assessment&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="96" y="480" width="324" height="132" as="geometry" />
         </mxCell>
@@ -65,14 +68,14 @@
         <mxCell id="r9l6ygumFsfBTqQ8MOW--22" value="&amp;lt; 5min 2 cores, &amp;lt; 60 min" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="192" y="948" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="r9l6ygumFsfBTqQ8MOW--26" value="&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Synteny Comparison&lt;/b&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Input: Send in the entire genome in a FASTA format&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Output: Table&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="-168" y="528" width="192" height="84" as="geometry" />
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--26" value="&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Synteny Comparison&lt;/b&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Input: Send in the entire genome in a FASTA format&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Output: Table with a list of comparisons between&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-192" y="492" width="216" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="r9l6ygumFsfBTqQ8MOW--29" value="BLASTn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-132" y="612" width="120" height="60" as="geometry" />
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--29" value="Blastn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-156" y="612" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="r9l6ygumFsfBTqQ8MOW--30" value="5 hours (2 cores)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="-132" y="672" width="120" height="60" as="geometry" />
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--30" value="Length????" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-156" y="672" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="r9l6ygumFsfBTqQ8MOW--36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="r9l6ygumFsfBTqQ8MOW--33" target="r9l6ygumFsfBTqQ8MOW--4">
           <mxGeometry relative="1" as="geometry" />
@@ -130,6 +133,21 @@
         </mxCell>
         <mxCell id="r9l6ygumFsfBTqQ8MOW--20" value="&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&amp;nbsp;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;span style=&quot;font-size: 16px&quot;&gt;Structural and&lt;br style=&quot;font-size: 16px&quot;&gt;functional annotation&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;Input: &lt;/font&gt;&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;preassembled genomic DNA sequences in FASTA format&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;Output: 10 files, including .txt annotation summary statistics, .ffn &lt;/font&gt;&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;FASTA file of all genomic features (nucleotide) &lt;font style=&quot;font-size: 16px&quot;&gt;&lt;span style=&quot;font-size: 16px&quot;&gt;&lt;/span&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="72" y="744" width="384" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--73" value="&lt;div&gt;Visualize Synteny&lt;/div&gt;&lt;div&gt;Input: fasta file&lt;/div&gt;&lt;div&gt;Output: Graphical interface showing parwise comparisons.&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-252" y="216" width="204" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--79" value="Artemis" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-204" y="312" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;fontFamily=Times New Roman;fontSize=16;endArrow=none;" edge="1" parent="1" source="r9l6ygumFsfBTqQ8MOW--14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="177" y="480" as="sourcePoint" />
+            <mxPoint x="-144" y="426" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--81" value="Length???????" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-204" y="372" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
