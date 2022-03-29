@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2022-03-29T08:49:10.758Z" agent="5.0 (Macintosh)" etag="JwpyemcpOo-S-P0BqoCA" version="15.2.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-29T08:56:02.002Z" agent="5.0 (Macintosh)" etag="eaWVtYj987epQm9P356M" version="15.2.7" type="github">
   <diagram name="Page-1" id="edf60f1a-56cd-e834-aa8a-f176f3a09ee4">
-    <mxGraphModel dx="2051" dy="806" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2051" dy="1656" grid="1" gridSize="12" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="r9l6ygumFsfBTqQ8MOW--1" value="&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Genome Assembly of Pacbio Reads&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Input: PacBio long reads&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Output: &lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
-          <mxGeometry x="136" y="240" width="212" height="96" as="geometry" />
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--1" value="&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Genome Assembly of Pacbio Reads&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Input: PacBio long reads (pre-trimmed)&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Output: Contigs.fasta, contigs.layout, assembly report&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="136" y="192" width="236" height="144" as="geometry" />
         </mxCell>
         <mxCell id="r9l6ygumFsfBTqQ8MOW--2" value="Canu" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="182" y="336" width="120" height="60" as="geometry" />
@@ -53,8 +53,8 @@
         <mxCell id="r9l6ygumFsfBTqQ8MOW--66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Times New Roman;fontSize=16;" edge="1" parent="1" source="r9l6ygumFsfBTqQ8MOW--14" target="r9l6ygumFsfBTqQ8MOW--20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r9l6ygumFsfBTqQ8MOW--14" value="&lt;div&gt;Assembly Quality Assessment&lt;div&gt;&lt;font style=&quot;font-size: 17px&quot;&gt;Input: &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 17px&quot;&gt;Output&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="144" y="528" width="192" height="84" as="geometry" />
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--14" value="&lt;div style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Assembly Quality Assessment&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Input:&amp;nbsp; &lt;/font&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;assemblies and reference gen&lt;font style=&quot;font-size: 16px&quot; face=&quot;Times New Roman&quot;&gt;o&lt;/font&gt;mes in FASTA format&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;Output: K mer stats, reads stats, metrics&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&amp;nbsp;related to assembly assessment&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="96" y="480" width="324" height="132" as="geometry" />
         </mxCell>
         <mxCell id="r9l6ygumFsfBTqQ8MOW--15" value="QUAST/ MUMmerplot" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="182" y="612" width="120" height="60" as="geometry" />
@@ -80,8 +80,8 @@
         <mxCell id="r9l6ygumFsfBTqQ8MOW--36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="r9l6ygumFsfBTqQ8MOW--33" target="r9l6ygumFsfBTqQ8MOW--4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r9l6ygumFsfBTqQ8MOW--33" value="Quality Check&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;Input:&lt;/div&gt;&lt;div style=&quot;font-size: 16px;&quot;&gt;Output:&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
-          <mxGeometry x="570" y="72" width="174" height="108" as="geometry" />
+        <mxCell id="r9l6ygumFsfBTqQ8MOW--33" value="Quality Check&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;Input: SAM/BAM or FastQ file&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 16px&quot;&gt;Output: &lt;br&gt;&lt;li&gt;Providing a quick overview to tell you in which areas there may be problems&lt;/li&gt;&lt;li&gt;Summary graphs and tables to quickly assess your data&lt;/li&gt;&lt;br&gt;&lt;br&gt;	&lt;br&gt;&lt;br&gt;	&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="456" width="480" height="180" as="geometry" />
         </mxCell>
         <mxCell id="r9l6ygumFsfBTqQ8MOW--34" value="FastQC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="600" y="180" width="120" height="60" as="geometry" />
