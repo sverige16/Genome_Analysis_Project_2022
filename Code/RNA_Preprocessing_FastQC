@@ -1,0 +1,45 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 02:00:00
+#SBATCH -J RNA_Test_5_Apr
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user erikspencereverett@gmail.com
+
+set -x
+
+# make new directory for FastQ files
+mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/test_$SLURM_JOB_ID
+cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/test_$SLURM_JOB_ID
+
+# copying multiple files to external directory 
+export SRCDIR=$HOME
+
+# making directory within storage node
+cd $SNIC_TMP
+mkdir RNA_raw_data
+mkdir output
+
+# copying multiple files to external directory
+cp  /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/* $SNIC_TMP/RNA_raw_data
+
+# Load modules
+module load bioinfo-tools
+module load FastQC
+
+# Unzipping Sequencing Files
+for f in $SNIC_TMP/RNA_raw_data/*
+do
+  	echo "$f"
+        gunzip "$f"
+done
+
+cd ..
+# Going into output
+cd $SNIC_TMP/output
+fastqc -f -o $SNIC_TMP/output -f fastq $SNIC_TMP/RNA_raw_data/*
+
+# Returning to external storage
+cp $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/test_$SLURM_JOB_ID
