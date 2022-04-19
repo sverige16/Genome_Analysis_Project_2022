@@ -8,7 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
-# Using Prokka for Structural and  to assess Genome Assembly Quality
+# It works! Using Prokka for Structural and  to assess Genome Assembly Quality
 set -x
 echo QOS = $SLURM_JOB_QOS
 
