@@ -1,0 +1,148 @@
++ echo QOS = normal
+QOS = normal
++ mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/Quast_6133886
++ cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/Quast_6133886
++ export SRCDIR=/home/erikpa
++ SRCDIR=/home/erikpa
++ cd /scratch/6133886
++ mkdir Assembled_data
++ mkdir output
++ cp /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta /scratch/6133886/Assembled_data
++ module load bioinfo-tools
+++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:4\;gnuparallel/20170122:1\;perl/5.24.1:1\;perl_modules/5.24.1:1\;BioPerl/1.7.1_Perl5.24.1:1\;blast_databases/latest:1\;blast/2.11.0+:1\;hmmer/3.1b2:1\;aragorn/1.2.38:1\;prodigal/2.6.3:1\;tbl2asn/25.8:1\;SignalP/4.1f:1\;barrnap/0.8:1\;minced/0.2.0:1\;prokka/1.45-5b58020:1\;python/3.7.2:1\;quast/5.0.2:1\;bioinfo-tools:2;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:gnuparallel/20170122:perl/5.24.1:perl_modules/5.24.1:BioPerl/1.7.1_Perl5.24.1:blast_databases/latest:blast/2.11.0+:hmmer/3.1b2:aragorn/1.2.38:prodigal/2.6.3:tbl2asn/25.8:SignalP/4.1f:barrnap/0.8:minced/0.2.0:prokka/1.45-5b58020:python/3.7.2:quast/5.0.2:bioinfo-tools;' export 'LOADEDMODULES;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv;' export '_ModuleTable001_;' '_ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI;' export '_ModuleTable002_;' '_ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:4;gnuparallel/20170122:1;perl/5.24.1:1;perl_modules/5.24.1:1;BioPerl/1.7.1_Perl5.24.1:1;blast_databases/latest:1;blast/2.11.0+:1;hmmer/3.1b2:1;aragorn/1.2.38:1;prodigal/2.6.3:1;tbl2asn/25.8:1;SignalP/4.1f:1;barrnap/0.8:1;minced/0.2.0:1;prokka/1.45-5b58020:1;python/3.7.2:1;quast/5.0.2:1;bioinfo-tools:2'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:gnuparallel/20170122:perl/5.24.1:perl_modules/5.24.1:BioPerl/1.7.1_Perl5.24.1:blast_databases/latest:blast/2.11.0+:hmmer/3.1b2:aragorn/1.2.38:prodigal/2.6.3:tbl2asn/25.8:SignalP/4.1f:barrnap/0.8:minced/0.2.0:prokka/1.45-5b58020:python/3.7.2:quast/5.0.2:bioinfo-tools
+++ export LOADEDMODULES
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI
+++ export _ModuleTable002_
+++ _ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load quast
+++ /usr/share/lmod/lmod/libexec/lmod bash load quast
++ eval '__LMOD_REF_COUNT_LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:2\;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:1\;/sw/comp/perl_modules/5.24.1/snowy/lib:1;' export '__LMOD_REF_COUNT_LD_LIBRARY_PATH;' 'LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:/sw/comp/perl_modules/5.24.1/snowy/lib;' export 'LD_LIBRARY_PATH;' '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:4\;gnuparallel/20170122:1\;perl/5.24.1:1\;perl_modules/5.24.1:1\;BioPerl/1.7.1_Perl5.24.1:1\;blast_databases/latest:1\;blast/2.11.0+:1\;hmmer/3.1b2:1\;aragorn/1.2.38:1\;prodigal/2.6.3:1\;tbl2asn/25.8:1\;SignalP/4.1f:1\;barrnap/0.8:1\;minced/0.2.0:1\;prokka/1.45-5b58020:1\;bioinfo-tools:2\;python/3.7.2:2\;quast/5.0.2:2;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:gnuparallel/20170122:perl/5.24.1:perl_modules/5.24.1:BioPerl/1.7.1_Perl5.24.1:blast_databases/latest:blast/2.11.0+:hmmer/3.1b2:aragorn/1.2.38:prodigal/2.6.3:tbl2asn/25.8:SignalP/4.1f:barrnap/0.8:minced/0.2.0:prokka/1.45-5b58020:bioinfo-tools:python/3.7.2:quast/5.0.2;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH=/sw/comp/python/3.7.2_snowy/share/man:2\;/sw/bioinfo/prokka/1.45-5b58020/snowy/man:1\;/sw/bioinfo/SignalP/4.1f/snowy/man:1\;/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:1\;/sw/comp/perl/5.24.1/snowy/man:1\;/sw/parallel/gnuparallel/20170122/snowy/share/man:1\;/usr/share/man:4\;/sw/uppmax/man:4\;/opt/thinlinc/share/man:4\;/sw/comp/perl_modules/5.24.1/snowy/man:1\;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:1\;/sw/apps/bioinfo/hmmer/3.1b2/snowy/man:1;' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH=/sw/comp/python/3.7.2_snowy/share/man:/sw/bioinfo/prokka/1.45-5b58020/snowy/man:/sw/bioinfo/SignalP/4.1f/snowy/man:/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:/sw/comp/perl/5.24.1/snowy/man:/sw/parallel/gnuparallel/20170122/snowy/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.24.1/snowy/man:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:/sw/apps/bioinfo/hmmer/3.1b2/snowy/man;' export 'MANPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/apps/bioinfo/quast/5.0.2/snowy/bin:2\;/sw/comp/python/3.7.2_snowy/bin:2\;/home/erikpa/bin:2\;/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:1\;/sw/apps/bioinfo/minced/0.2.0/snowy:1\;/sw/bioinfo/barrnap/0.8/snowy/bin:1\;/sw/bioinfo/SignalP/4.1f/snowy:1\;/sw/bioinfo/tbl2asn/25.8/snowy:1\;/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:1\;/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:1\;/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:1\;/sw/bioinfo/blast/2.11.0+/snowy/bin:1\;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:1\;/sw/comp/perl_modules/5.24.1/snowy/bin:1\;/sw/comp/perl/5.24.1/snowy/bin:1\;/sw/parallel/gnuparallel/20170122/snowy/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/sw/uppmax/bin:4;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/apps/bioinfo/quast/5.0.2/snowy/bin:/sw/comp/python/3.7.2_snowy/bin:/home/erikpa/bin:/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:/sw/apps/bioinfo/minced/0.2.0/snowy:/sw/bioinfo/barrnap/0.8/snowy/bin:/sw/bioinfo/SignalP/4.1f/snowy:/sw/bioinfo/tbl2asn/25.8/snowy:/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:/sw/bioinfo/blast/2.11.0+/snowy/bin:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:/sw/comp/perl_modules/5.24.1/snowy/bin:/sw/comp/perl/5.24.1/snowy/bin:/sw/parallel/gnuparallel/20170122/snowy/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sw/uppmax/bin;' export 'PATH;' '__LMOD_REF_COUNT_PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig:2;' export '__LMOD_REF_COUNT_PKG_CONFIG_PATH;' 'PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig;' export 'PKG_CONFIG_PATH;' '__LMOD_REF_COUNT_PYTHONPATH=/sw/apps/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages:2;' export '__LMOD_REF_COUNT_PYTHONPATH;' 'PYTHONPATH=/sw/apps/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages;' export 'PYTHONPATH;' 'PYTHON_ROOT=/sw/comp/python/3.7.2_snowy;' export 'PYTHON_ROOT;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/compilers/python/3.7.2:1\;/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/compilers/python/3.7.2:/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxweXRob249e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9weXRob24vMy43LjIiLFsiZnVsbE5hbWUiXT0icHl0aG9uLzMuNy4yIixbImxvYWRPcmRlciJd;' export '_ModuleTable001_;' '_ModuleTable002_=PTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHl0aG9uLzMuNy4yIix9LHF1YXN0PXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvcXVhc3QvNS4wLjIiLFsiZnVsbE5hbWUiXT0icXVhc3QvNS4wLjIiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJxdWFzdCIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9t;' export '_ModuleTable002_;' '_ModuleTable003_=Zi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nu;' export '_ModuleTable003_;' '_ModuleTable004_=b3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable004_;' '_ModuleTable_Sz_=4;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LD_LIBRARY_PATH='/sw/libs/wxWidgets/lib:2;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:1;/sw/comp/perl_modules/5.24.1/snowy/lib:1'
+++ export __LMOD_REF_COUNT_LD_LIBRARY_PATH
+++ LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:/sw/comp/perl_modules/5.24.1/snowy/lib
+++ export LD_LIBRARY_PATH
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:4;gnuparallel/20170122:1;perl/5.24.1:1;perl_modules/5.24.1:1;BioPerl/1.7.1_Perl5.24.1:1;blast_databases/latest:1;blast/2.11.0+:1;hmmer/3.1b2:1;aragorn/1.2.38:1;prodigal/2.6.3:1;tbl2asn/25.8:1;SignalP/4.1f:1;barrnap/0.8:1;minced/0.2.0:1;prokka/1.45-5b58020:1;bioinfo-tools:2;python/3.7.2:2;quast/5.0.2:2'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:gnuparallel/20170122:perl/5.24.1:perl_modules/5.24.1:BioPerl/1.7.1_Perl5.24.1:blast_databases/latest:blast/2.11.0+:hmmer/3.1b2:aragorn/1.2.38:prodigal/2.6.3:tbl2asn/25.8:SignalP/4.1f:barrnap/0.8:minced/0.2.0:prokka/1.45-5b58020:bioinfo-tools:python/3.7.2:quast/5.0.2
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MANPATH='/sw/comp/python/3.7.2_snowy/share/man:2;/sw/bioinfo/prokka/1.45-5b58020/snowy/man:1;/sw/bioinfo/SignalP/4.1f/snowy/man:1;/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:1;/sw/comp/perl/5.24.1/snowy/man:1;/sw/parallel/gnuparallel/20170122/snowy/share/man:1;/usr/share/man:4;/sw/uppmax/man:4;/opt/thinlinc/share/man:4;/sw/comp/perl_modules/5.24.1/snowy/man:1;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:1;/sw/apps/bioinfo/hmmer/3.1b2/snowy/man:1'
+++ export __LMOD_REF_COUNT_MANPATH
+++ MANPATH=/sw/comp/python/3.7.2_snowy/share/man:/sw/bioinfo/prokka/1.45-5b58020/snowy/man:/sw/bioinfo/SignalP/4.1f/snowy/man:/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:/sw/comp/perl/5.24.1/snowy/man:/sw/parallel/gnuparallel/20170122/snowy/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.24.1/snowy/man:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:/sw/apps/bioinfo/hmmer/3.1b2/snowy/man
+++ export MANPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/apps/bioinfo/quast/5.0.2/snowy/bin:2;/sw/comp/python/3.7.2_snowy/bin:2;/home/erikpa/bin:2;/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:1;/sw/apps/bioinfo/minced/0.2.0/snowy:1;/sw/bioinfo/barrnap/0.8/snowy/bin:1;/sw/bioinfo/SignalP/4.1f/snowy:1;/sw/bioinfo/tbl2asn/25.8/snowy:1;/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:1;/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:1;/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:1;/sw/bioinfo/blast/2.11.0+/snowy/bin:1;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:1;/sw/comp/perl_modules/5.24.1/snowy/bin:1;/sw/comp/perl/5.24.1/snowy/bin:1;/sw/parallel/gnuparallel/20170122/snowy/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/sw/uppmax/bin:4'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/apps/bioinfo/quast/5.0.2/snowy/bin:/sw/comp/python/3.7.2_snowy/bin:/home/erikpa/bin:/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:/sw/apps/bioinfo/minced/0.2.0/snowy:/sw/bioinfo/barrnap/0.8/snowy/bin:/sw/bioinfo/SignalP/4.1f/snowy:/sw/bioinfo/tbl2asn/25.8/snowy:/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:/sw/bioinfo/blast/2.11.0+/snowy/bin:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:/sw/comp/perl_modules/5.24.1/snowy/bin:/sw/comp/perl/5.24.1/snowy/bin:/sw/parallel/gnuparallel/20170122/snowy/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sw/uppmax/bin
+++ export PATH
+++ __LMOD_REF_COUNT_PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig:2
+++ export __LMOD_REF_COUNT_PKG_CONFIG_PATH
+++ PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig
+++ export PKG_CONFIG_PATH
+++ __LMOD_REF_COUNT_PYTHONPATH=/sw/apps/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages:2
+++ export __LMOD_REF_COUNT_PYTHONPATH
+++ PYTHONPATH=/sw/apps/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages
+++ export PYTHONPATH
+++ PYTHON_ROOT=/sw/comp/python/3.7.2_snowy
+++ export PYTHON_ROOT
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/compilers/python/3.7.2:1;/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/compilers/python/3.7.2:/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxweXRob249e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9weXRob24vMy43LjIiLFsiZnVsbE5hbWUiXT0icHl0aG9uLzMuNy4yIixbImxvYWRPcmRlciJd
+++ export _ModuleTable001_
+++ _ModuleTable002_=PTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHl0aG9uLzMuNy4yIix9LHF1YXN0PXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvcXVhc3QvNS4wLjIiLFsiZnVsbE5hbWUiXT0icXVhc3QvNS4wLjIiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJxdWFzdCIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9t
+++ export _ModuleTable002_
+++ _ModuleTable003_=Zi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nu
+++ export _ModuleTable003_
+++ _ModuleTable004_=b3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable004_
+++ _ModuleTable_Sz_=4
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ cd /scratch/6133886/output
++ quast.py /scratch/6133886/Assembled_data/assembled_L.ferri_1_4.contigs.fasta
+/sw/apps/bioinfo/quast/5.0.2/snowy/bin/quast.py /scratch/6133886/Assembled_data/assembled_L.ferri_1_4.contigs.fasta
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.59.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2022-04-19 16:03:11
+
+Logging to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /scratch/6133886/output
+Main parameters: 
+  MODE: default, threads: 4, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Contigs:
+  Pre-processing...
+  /scratch/6133886/Assembled_data/assembled_L.ferri_1_4.contigs.fasta ==> assembled_L.ferri_1_4.contigs
+
+2022-04-19 16:03:12
+Running Basic statistics processor...
+  Contig files: 
+    assembled_L.ferri_1_4.contigs
+  Calculating N50 and L50...
+    assembled_L.ferri_1_4.contigs, N50 = 2564281, L50 = 1, Total length = 2642833, GC % = 54.01, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/basic_stats/GC_content_plot.pdf
+  Drawing assembled_L.ferri_1_4.contigs GC content plot...
+    saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/basic_stats/assembled_L.ferri_1_4.contigs_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2022-04-19 16:03:13
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2022-04-19 16:03:14
+RESULTS:
+  Text versions of total report are saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/report.html
+  PDF version (tables and plots) is saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/report.pdf
+  Icarus (contig browser) is saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/icarus.html
+  Log is saved to /scratch/6133886/output/quast_results/results_2022_04_19_16_03_11/quast.log
+
+Finished: 2022-04-19 16:03:14
+Elapsed time: 0:00:03.411403
+NOTICEs: 2; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
++ ls
+quast_results
++ cp /scratch/6133886/output/quast_results /home/erikpa/Genome_Analysis_Project_2022/Analysis/Quast_6133886
+cp: omitting directory ‘/scratch/6133886/output/quast_results’

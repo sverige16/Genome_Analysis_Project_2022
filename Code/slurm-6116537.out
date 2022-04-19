@@ -60,3 +60,266 @@
 + echo /scratch/6116537/RNA_raw_data/ERR2036629_1.fastq.gz
 /scratch/6116537/RNA_raw_data/ERR2036629_1.fastq.gz
 + gunzip /scratch/6116537/RNA_raw_data/ERR2036629_1.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036629_2.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036629_2.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036629_2.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036630_1.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036630_1.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036630_1.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036630_2.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036630_2.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036630_2.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036631_1.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036631_1.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036631_1.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036631_2.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036631_2.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036631_2.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036632_1.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036632_1.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036632_1.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036632_2.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036632_2.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036632_2.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036633_1.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036633_1.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036633_1.fastq.gz
++ for f in '$SNIC_TMP/RNA_raw_data/*'
++ echo /scratch/6116537/RNA_raw_data/ERR2036633_2.fastq.gz
+/scratch/6116537/RNA_raw_data/ERR2036633_2.fastq.gz
++ gunzip /scratch/6116537/RNA_raw_data/ERR2036633_2.fastq.gz
++ cd ..
++ fastqc -o /scratch/6116537/output -f fastq /scratch/6116537/RNA_raw_data/ERR2036629_1.fastq /scratch/6116537/RNA_raw_data/ERR2036629_2.fastq /scratch/6116537/RNA_raw_data/ERR2036630_1.fastq /scratch/6116537/RNA_raw_data/ERR2036630_2.fastq /scratch/6116537/RNA_raw_data/ERR2036631_1.fastq /scratch/6116537/RNA_raw_data/ERR2036631_2.fastq /scratch/6116537/RNA_raw_data/ERR2036632_1.fastq /scratch/6116537/RNA_raw_data/ERR2036632_2.fastq /scratch/6116537/RNA_raw_data/ERR2036633_1.fastq /scratch/6116537/RNA_raw_data/ERR2036633_2.fastq
+Started analysis of ERR2036629_1.fastq
+Approx 5% complete for ERR2036629_1.fastq
+Approx 10% complete for ERR2036629_1.fastq
+Approx 15% complete for ERR2036629_1.fastq
+Approx 20% complete for ERR2036629_1.fastq
+Approx 25% complete for ERR2036629_1.fastq
+Approx 30% complete for ERR2036629_1.fastq
+Approx 35% complete for ERR2036629_1.fastq
+Approx 40% complete for ERR2036629_1.fastq
+Approx 45% complete for ERR2036629_1.fastq
+Approx 50% complete for ERR2036629_1.fastq
+Approx 55% complete for ERR2036629_1.fastq
+Approx 60% complete for ERR2036629_1.fastq
+Approx 65% complete for ERR2036629_1.fastq
+Approx 70% complete for ERR2036629_1.fastq
+Approx 75% complete for ERR2036629_1.fastq
+Approx 80% complete for ERR2036629_1.fastq
+Approx 85% complete for ERR2036629_1.fastq
+Approx 90% complete for ERR2036629_1.fastq
+Approx 95% complete for ERR2036629_1.fastq
+Analysis complete for ERR2036629_1.fastq
+Started analysis of ERR2036629_2.fastq
+Approx 5% complete for ERR2036629_2.fastq
+Approx 10% complete for ERR2036629_2.fastq
+Approx 15% complete for ERR2036629_2.fastq
+Approx 20% complete for ERR2036629_2.fastq
+Approx 25% complete for ERR2036629_2.fastq
+Approx 30% complete for ERR2036629_2.fastq
+Approx 35% complete for ERR2036629_2.fastq
+Approx 40% complete for ERR2036629_2.fastq
+Approx 45% complete for ERR2036629_2.fastq
+Approx 50% complete for ERR2036629_2.fastq
+Approx 55% complete for ERR2036629_2.fastq
+Approx 60% complete for ERR2036629_2.fastq
+Approx 65% complete for ERR2036629_2.fastq
+Approx 70% complete for ERR2036629_2.fastq
+Approx 75% complete for ERR2036629_2.fastq
+Approx 80% complete for ERR2036629_2.fastq
+Approx 85% complete for ERR2036629_2.fastq
+Approx 90% complete for ERR2036629_2.fastq
+Approx 95% complete for ERR2036629_2.fastq
+Analysis complete for ERR2036629_2.fastq
+Started analysis of ERR2036630_1.fastq
+Approx 5% complete for ERR2036630_1.fastq
+Approx 10% complete for ERR2036630_1.fastq
+Approx 15% complete for ERR2036630_1.fastq
+Approx 20% complete for ERR2036630_1.fastq
+Approx 25% complete for ERR2036630_1.fastq
+Approx 30% complete for ERR2036630_1.fastq
+Approx 35% complete for ERR2036630_1.fastq
+Approx 40% complete for ERR2036630_1.fastq
+Approx 45% complete for ERR2036630_1.fastq
+Approx 50% complete for ERR2036630_1.fastq
+Approx 55% complete for ERR2036630_1.fastq
+Approx 60% complete for ERR2036630_1.fastq
+Approx 65% complete for ERR2036630_1.fastq
+Approx 70% complete for ERR2036630_1.fastq
+Approx 75% complete for ERR2036630_1.fastq
+Approx 80% complete for ERR2036630_1.fastq
+Approx 85% complete for ERR2036630_1.fastq
+Approx 90% complete for ERR2036630_1.fastq
+Approx 95% complete for ERR2036630_1.fastq
+Analysis complete for ERR2036630_1.fastq
+Started analysis of ERR2036630_2.fastq
+Approx 5% complete for ERR2036630_2.fastq
+Approx 10% complete for ERR2036630_2.fastq
+Approx 15% complete for ERR2036630_2.fastq
+Approx 20% complete for ERR2036630_2.fastq
+Approx 25% complete for ERR2036630_2.fastq
+Approx 30% complete for ERR2036630_2.fastq
+Approx 35% complete for ERR2036630_2.fastq
+Approx 40% complete for ERR2036630_2.fastq
+Approx 45% complete for ERR2036630_2.fastq
+Approx 50% complete for ERR2036630_2.fastq
+Approx 55% complete for ERR2036630_2.fastq
+Approx 60% complete for ERR2036630_2.fastq
+Approx 65% complete for ERR2036630_2.fastq
+Approx 70% complete for ERR2036630_2.fastq
+Approx 75% complete for ERR2036630_2.fastq
+Approx 80% complete for ERR2036630_2.fastq
+Approx 85% complete for ERR2036630_2.fastq
+Approx 90% complete for ERR2036630_2.fastq
+Approx 95% complete for ERR2036630_2.fastq
+Analysis complete for ERR2036630_2.fastq
+Started analysis of ERR2036631_1.fastq
+Approx 5% complete for ERR2036631_1.fastq
+Approx 10% complete for ERR2036631_1.fastq
+Approx 15% complete for ERR2036631_1.fastq
+Approx 20% complete for ERR2036631_1.fastq
+Approx 25% complete for ERR2036631_1.fastq
+Approx 30% complete for ERR2036631_1.fastq
+Approx 35% complete for ERR2036631_1.fastq
+Approx 40% complete for ERR2036631_1.fastq
+Approx 45% complete for ERR2036631_1.fastq
+Approx 50% complete for ERR2036631_1.fastq
+Approx 55% complete for ERR2036631_1.fastq
+Approx 60% complete for ERR2036631_1.fastq
+Approx 65% complete for ERR2036631_1.fastq
+Approx 70% complete for ERR2036631_1.fastq
+Approx 75% complete for ERR2036631_1.fastq
+Approx 80% complete for ERR2036631_1.fastq
+Approx 85% complete for ERR2036631_1.fastq
+Approx 90% complete for ERR2036631_1.fastq
+Approx 95% complete for ERR2036631_1.fastq
+Analysis complete for ERR2036631_1.fastq
+Started analysis of ERR2036631_2.fastq
+Approx 5% complete for ERR2036631_2.fastq
+Approx 10% complete for ERR2036631_2.fastq
+Approx 15% complete for ERR2036631_2.fastq
+Approx 20% complete for ERR2036631_2.fastq
+Approx 25% complete for ERR2036631_2.fastq
+Approx 30% complete for ERR2036631_2.fastq
+Approx 35% complete for ERR2036631_2.fastq
+Approx 40% complete for ERR2036631_2.fastq
+Approx 45% complete for ERR2036631_2.fastq
+Approx 50% complete for ERR2036631_2.fastq
+Approx 55% complete for ERR2036631_2.fastq
+Approx 60% complete for ERR2036631_2.fastq
+Approx 65% complete for ERR2036631_2.fastq
+Approx 70% complete for ERR2036631_2.fastq
+Approx 75% complete for ERR2036631_2.fastq
+Approx 80% complete for ERR2036631_2.fastq
+Approx 85% complete for ERR2036631_2.fastq
+Approx 90% complete for ERR2036631_2.fastq
+Approx 95% complete for ERR2036631_2.fastq
+Analysis complete for ERR2036631_2.fastq
+Started analysis of ERR2036632_1.fastq
+Approx 5% complete for ERR2036632_1.fastq
+Approx 10% complete for ERR2036632_1.fastq
+Approx 15% complete for ERR2036632_1.fastq
+Approx 20% complete for ERR2036632_1.fastq
+Approx 25% complete for ERR2036632_1.fastq
+Approx 30% complete for ERR2036632_1.fastq
+Approx 35% complete for ERR2036632_1.fastq
+Approx 40% complete for ERR2036632_1.fastq
+Approx 45% complete for ERR2036632_1.fastq
+Approx 50% complete for ERR2036632_1.fastq
+Approx 55% complete for ERR2036632_1.fastq
+Approx 60% complete for ERR2036632_1.fastq
+Approx 65% complete for ERR2036632_1.fastq
+Approx 70% complete for ERR2036632_1.fastq
+Approx 75% complete for ERR2036632_1.fastq
+Approx 80% complete for ERR2036632_1.fastq
+Approx 85% complete for ERR2036632_1.fastq
+Approx 90% complete for ERR2036632_1.fastq
+Approx 95% complete for ERR2036632_1.fastq
+Analysis complete for ERR2036632_1.fastq
+Started analysis of ERR2036632_2.fastq
+Approx 5% complete for ERR2036632_2.fastq
+Approx 10% complete for ERR2036632_2.fastq
+Approx 15% complete for ERR2036632_2.fastq
+Approx 20% complete for ERR2036632_2.fastq
+Approx 25% complete for ERR2036632_2.fastq
+Approx 30% complete for ERR2036632_2.fastq
+Approx 35% complete for ERR2036632_2.fastq
+Approx 40% complete for ERR2036632_2.fastq
+Approx 45% complete for ERR2036632_2.fastq
+Approx 50% complete for ERR2036632_2.fastq
+Approx 55% complete for ERR2036632_2.fastq
+Approx 60% complete for ERR2036632_2.fastq
+Approx 65% complete for ERR2036632_2.fastq
+Approx 70% complete for ERR2036632_2.fastq
+Approx 75% complete for ERR2036632_2.fastq
+Approx 80% complete for ERR2036632_2.fastq
+Approx 85% complete for ERR2036632_2.fastq
+Approx 90% complete for ERR2036632_2.fastq
+Approx 95% complete for ERR2036632_2.fastq
+Analysis complete for ERR2036632_2.fastq
+Started analysis of ERR2036633_1.fastq
+Approx 5% complete for ERR2036633_1.fastq
+Approx 10% complete for ERR2036633_1.fastq
+Approx 15% complete for ERR2036633_1.fastq
+Approx 20% complete for ERR2036633_1.fastq
+Approx 25% complete for ERR2036633_1.fastq
+Approx 30% complete for ERR2036633_1.fastq
+Approx 35% complete for ERR2036633_1.fastq
+Approx 40% complete for ERR2036633_1.fastq
+Approx 45% complete for ERR2036633_1.fastq
+Approx 50% complete for ERR2036633_1.fastq
+Approx 55% complete for ERR2036633_1.fastq
+Approx 60% complete for ERR2036633_1.fastq
+Approx 65% complete for ERR2036633_1.fastq
+Approx 70% complete for ERR2036633_1.fastq
+Approx 75% complete for ERR2036633_1.fastq
+Approx 80% complete for ERR2036633_1.fastq
+Approx 85% complete for ERR2036633_1.fastq
+Approx 90% complete for ERR2036633_1.fastq
+Approx 95% complete for ERR2036633_1.fastq
+Analysis complete for ERR2036633_1.fastq
+Started analysis of ERR2036633_2.fastq
+Approx 5% complete for ERR2036633_2.fastq
+Approx 10% complete for ERR2036633_2.fastq
+Approx 15% complete for ERR2036633_2.fastq
+Approx 20% complete for ERR2036633_2.fastq
+Approx 25% complete for ERR2036633_2.fastq
+Approx 30% complete for ERR2036633_2.fastq
+Approx 35% complete for ERR2036633_2.fastq
+Approx 40% complete for ERR2036633_2.fastq
+Approx 45% complete for ERR2036633_2.fastq
+Approx 50% complete for ERR2036633_2.fastq
+Approx 55% complete for ERR2036633_2.fastq
+Approx 60% complete for ERR2036633_2.fastq
+Approx 65% complete for ERR2036633_2.fastq
+Approx 70% complete for ERR2036633_2.fastq
+Approx 75% complete for ERR2036633_2.fastq
+Approx 80% complete for ERR2036633_2.fastq
+Approx 85% complete for ERR2036633_2.fastq
+Approx 90% complete for ERR2036633_2.fastq
+Approx 95% complete for ERR2036633_2.fastq
+Analysis complete for ERR2036633_2.fastq
++ echo 'display output'
+display output
++ ls
+6116293
+6116338
+6116376
+6116390
+6116506
+6116519
+6116537
+6116553
+6116554
+lost+found
+slashtmp
++ cp /scratch/6116537/output/ERR2036629_1_fastqc.html /scratch/6116537/output/ERR2036629_1_fastqc.zip /scratch/6116537/output/ERR2036629_2_fastqc.html /scratch/6116537/output/ERR2036629_2_fastqc.zip /scratch/6116537/output/ERR2036630_1_fastqc.html /scratch/6116537/output/ERR2036630_1_fastqc.zip /scratch/6116537/output/ERR2036630_2_fastqc.html /scratch/6116537/output/ERR2036630_2_fastqc.zip /scratch/6116537/output/ERR2036631_1_fastqc.html /scratch/6116537/output/ERR2036631_1_fastqc.zip /scratch/6116537/output/ERR2036631_2_fastqc.html /scratch/6116537/output/ERR2036631_2_fastqc.zip /scratch/6116537/output/ERR2036632_1_fastqc.html /scratch/6116537/output/ERR2036632_1_fastqc.zip /scratch/6116537/output/ERR2036632_2_fastqc.html /scratch/6116537/output/ERR2036632_2_fastqc.zip /scratch/6116537/output/ERR2036633_1_fastqc.html /scratch/6116537/output/ERR2036633_1_fastqc.zip /scratch/6116537/output/ERR2036633_2_fastqc.html /scratch/6116537/output/ERR2036633_2_fastqc.zip /home/erikpa/Genome_Analysis_Project_2022/Analysis/FASTQtest_6116537
