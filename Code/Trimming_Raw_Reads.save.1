@@ -4,12 +4,10 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 02:00:00
-#SBATCH -J RNA_Test_19_Apr
+#SBATCH -J RNA_Test_23_Apr
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
-# What is NOT WORKING: HAVE TO LOOK AT THE HTML FILES AND DECIDE ALL THE PARAMTERS FOR THE ILLUMINA THING\
-# Including how much you are going to remove from the start # ask questions on thursday
 set -x
 
 # make new directory for FastQ files
@@ -23,9 +21,14 @@ export SRCDIR=$HOME
 cd $SNIC_TMP
 mkdir RNA_raw_data
 mkdir output
+mkdir adapter
 
 # copying multiple files to external directory
-cp  /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/* $SNIC_TMP/RNA_raw_data
+cp /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/* $SNIC_TMP/RNA_raw_data
+cp /home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa $SNIC_TMP/adapter
+
+# 
+cat $SNIC_TMP/adapter/TruSeq3-PE.fa
 
 # Load modules
 module load bioinfo-tools
@@ -34,42 +37,51 @@ module load trimmomatic
 # Going into output
 cd $SNIC_TMP/output
 
-trimmomatic PE -phred33 \
-$SNIC_TMP/RNA_raw_data/ERR2036629_1.fastq.gz $SNIC_TMP/RNA_raw_data/ERR2036629_2.fastq.gz \
-ERR2036629_1_output_forward_paired.fq.gz \
-ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gz \
-ILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36 
 
 trimmomatic PE -phred33 \
-$SNIC_TMP/RNA_raw_data/ERR2036630_1.fastq.gz $SNIC_TMP/RNA_raw_data/ERR2036630_2.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036629_1.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036629_2.fastq.gz \
+ERR2036629_1_output_forward_paired.fq.gz \
+ERR2036629_1_output_forward_unpaired.fq.gz \
+ERR2036629_2_output_reverse_paired.fq.gz \
+ERR2036629_2_output_reverse_paired.fq.gz \
+ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
+
+trimmomatic PE -phred33 \
+$SNIC_TMP/RNA_raw_data/ERR2036630_1.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036630_2.fastq.gz \
 ERR2036630_1_output_forward_paired.fq.gz \
-ERR2036630_1_output_forward_unpaired.fq.gz ERR2036630_2_reverse_paired.fq.gz\
-ILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
+ERR2036630_1_output_forward_unpaired.fq.gz \
+ERR2036630_2_output_reverse_paired.fq.gz \
+ERR2036630_2_output_reverse_paired.fq.gz \
+ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 trimmomatic PE -phred33 \
-$SNIC_TMP/RNA_raw_data/ERR2036629_1.fastq.gz $SNIC_TMP/RNA_raw_data/ERR2036631_2.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036631_1.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036631_2.fastq.gz \
 ERR2036631_1_output_forward_paired.fq.gz \
-ERR2036631_1_output_forward_unpaired.fq.gz ERR2036631_2_reverse_paired.fq.gz\
-ILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
+ERR2036631_1_output_forward_unpaired.fq.gz \
+ERR2036631_2_output_reverse_paired.fq.gz \
+ERR2036631_2_output_reverse_paired.fq.gz \
+ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 trimmomatic PE -phred33 \
-$SNIC_TMP/RNA_raw_data/ERR2036632_1.fastq.gz $SNIC_TMP/RNA_raw_data/ERR2036632_2.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036632_1.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036632_2.fastq.gz \
 ERR2036632_1_output_forward_paired.fq.gz \
-ERR2036632_1_output_forward_unpaired.fq.gz ERR2036632_2_reverse_paired.fq.gz\
-ILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
+ERR2036632_1_output_forward_unpaired.fq.gz \
+ERR2036632_2_output_reverse_paired.fq.gz \
+ERR2036632_2_output_reverse_paired.fq.gz \
+ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 trimmomatic PE -phred33 \
-$SNIC_TMP/RNA_raw_data/ERR2036633_1.fastq.gz $SNIC_TMP/RNA_raw_data/ERR2036633_2.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036633_1.fastq.gz \
+$SNIC_TMP/RNA_raw_data/ERR2036633_2.fastq.gz \
 ERR2036633_1_output_forward_paired.fq.gz \
-ERR2036633_1_output_forward_unpaired.fq.gz ERR2036633_2_reverse_paired.fq.gz\
-ILLUMINACLIP:$TRIMMOMATIC_HOME/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
-
-trimmomatic PE -phred33 \
-$SNIC_TMP/RNA_raw_data/ERR2036629_1.fastq.gz $SNIC_TMP/RNA_raw_data/ERR2036629_2.fastq.gz \
-ERR2036629_1_output_forward_paired.fq.gz \
-ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gz\
-ILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
-
+ERR2036633_1_output_forward_unpaired.fq.gz \
+ERR2036633_2_output_reverse_paired.fq.gz \
+ERR2036633_2_output_reverse_paired.fq.gz \
+ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 # Returning to external storage
-cp $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_$SLURM_JOB_ID
+cp -r $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_$SLURM_JOB_ID

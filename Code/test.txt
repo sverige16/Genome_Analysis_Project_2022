@@ -3,10 +3,12 @@
 #SBATCH -M snowy
 #SBATCH -p core
 #SBATCH -n 2
-#SBATCH -t 00:05:00
+#SBATCH -t 00:02:00
 #SBATCH -J Assembly_Test_1_March31
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
+
+set -x
 
 WORKDIR=/home/erikpa/Genome_Analysis_Project_2022/Analysis
 cd "$WORKDIR" || exit -1 

@@ -1,11 +1,11 @@
-+ mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6135066
-+ cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6135066
++ mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6139815
++ cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6139815
 + export SRCDIR=/home/erikpa
 + SRCDIR=/home/erikpa
-+ cd /scratch/6135066
++ cd /scratch/6139815
 + mkdir RNA_raw_data
 + mkdir output
-+ cp /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036629_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036629_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036630_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036630_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036631_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036631_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036632_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036632_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036633_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036633_2.fastq.gz /scratch/6135066/RNA_raw_data
++ cp /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036629_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036629_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036630_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036630_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036631_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036631_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036632_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036632_2.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036633_1.fastq.gz /proj/genomeanalysis2022/Genome_Analysis/2_Christel_2017/RNA_raw_data/ERR2036633_2.fastq.gz /scratch/6139815/RNA_raw_data
 + module load bioinfo-tools
 ++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools
 + eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:1\;/sw/mf/snowy/bioinfo-tools/alignment:1\;/sw/mf/snowy/bioinfo-tools/assembly:1\;/sw/mf/snowy/bioinfo-tools/misc:1\;/sw/mf/snowy/bioinfo-tools/phylogeny:1\;/sw/mf/snowy/bioinfo-tools/pipelines:1\;/sw/mf/snowy/bioinfo-tools/sw_collections:1\;/sw/mf/snowy/applications:1\;/sw/mf/snowy/build-tools:1\;/sw/mf/snowy/compilers:1\;/sw/mf/snowy/data:1\;/sw/mf/snowy/environment:1\;/sw/mf/snowy/libraries:1\;/sw/mf/snowy/parallel:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv;' export '_ModuleTable001_;' '_ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI;' export '_ModuleTable002_;' '_ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
@@ -60,36 +60,25 @@
 ++ export _ModuleTable_Sz_
 ++ : -s sh
 + eval
-+ cd /scratch/6135066/output
-+ trimmomatic PE -phred33 /scratch/6135066/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036629_2.fastq.gz ERR2036629_1_output_forward_paired.fq.gz ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gz ILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
++ cd /scratch/6139815/output
++ trimmomatic PE -phred33 /scratch/6139815/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036629_2.fastq.gz ERR2036629_1_output_forward_paired.fq.gz ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gz ILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 TrimmomaticPE: Started with arguments:
- -phred33 /scratch/6135066/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036629_2.fastq.gz ERR2036629_1_output_forward_paired.fq.gz ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gz ILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
+ -phred33 /scratch/6139815/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036629_2.fastq.gz ERR2036629_1_output_forward_paired.fq.gz ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gz ILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 Multiple cores found: Using 2 threads
-Input Read Pairs: 24278349 Both Surviving: 24112994 (99.32%) Forward Only Surviving: 154869 (0.64%) Reverse Only Surviving: 8456 (0.03%) Dropped: 2030 (0.01%)
-TrimmomaticPE: Completed successfully
-+ trimmomatic PE -phred33 /scratch/6135066/RNA_raw_data/ERR2036630_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036630_2.fastq.gz ERR2036630_1_output_forward_paired.fq.gz ERR2036630_1_output_forward_unpaired.fq.gz ERR2036630_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
+Exception in thread "main" java.io.FileNotFoundException: ILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.usadellab.trimmomatic.fastq.FastqSerializer.open(FastqSerializer.java:28)
+	at org.usadellab.trimmomatic.TrimmomaticPE.process(TrimmomaticPE.java:298)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:555)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
++ trimmomatic PE -phred33 /scratch/6139815/RNA_raw_data/ERR2036630_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036630_2.fastq.gz ERR2036630_1_output_forward_paired.fq.gz ERR2036630_1_output_forward_unpaired.fq.gz ERR2036630_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 TrimmomaticPE: Started with arguments:
- -phred33 /scratch/6135066/RNA_raw_data/ERR2036630_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036630_2.fastq.gz ERR2036630_1_output_forward_paired.fq.gz ERR2036630_1_output_forward_unpaired.fq.gz ERR2036630_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
+ -phred33 /scratch/6139815/RNA_raw_data/ERR2036630_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036630_2.fastq.gz ERR2036630_1_output_forward_paired.fq.gz ERR2036630_1_output_forward_unpaired.fq.gz ERR2036630_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 Multiple cores found: Using 2 threads
-Input Read Pairs: 25190273 Both Surviving: 24992601 (99.22%) Forward Only Surviving: 187868 (0.75%) Reverse Only Surviving: 6843 (0.03%) Dropped: 2961 (0.01%)
-TrimmomaticPE: Completed successfully
-+ trimmomatic PE -phred33 /scratch/6135066/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036631_2.fastq.gz ERR2036631_1_output_forward_paired.fq.gz ERR2036631_1_output_forward_unpaired.fq.gz ERR2036631_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
-TrimmomaticPE: Started with arguments:
- -phred33 /scratch/6135066/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036631_2.fastq.gz ERR2036631_1_output_forward_paired.fq.gz ERR2036631_1_output_forward_unpaired.fq.gz ERR2036631_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
-Multiple cores found: Using 2 threads
-Input Read Pairs: 20554133 Both Surviving: 20544772 (99.95%) Forward Only Surviving: 0 (0.00%) Reverse Only Surviving: 9361 (0.05%) Dropped: 0 (0.00%)
-TrimmomaticPE: Completed successfully
-+ trimmomatic PE -phred33 /scratch/6135066/RNA_raw_data/ERR2036632_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036632_2.fastq.gz ERR2036632_1_output_forward_paired.fq.gz ERR2036632_1_output_forward_unpaired.fq.gz ERR2036632_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
-TrimmomaticPE: Started with arguments:
- -phred33 /scratch/6135066/RNA_raw_data/ERR2036632_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036632_2.fastq.gz ERR2036632_1_output_forward_paired.fq.gz ERR2036632_1_output_forward_unpaired.fq.gz ERR2036632_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
-Multiple cores found: Using 2 threads
-Input Read Pairs: 27121727 Both Surviving: 27121727 (100.00%) Forward Only Surviving: 0 (0.00%) Reverse Only Surviving: 0 (0.00%) Dropped: 0 (0.00%)
-TrimmomaticPE: Completed successfully
-+ trimmomatic PE -phred33 /scratch/6135066/RNA_raw_data/ERR2036633_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036633_2.fastq.gz ERR2036633_1_output_forward_paired.fq.gz ERR2036633_1_output_forward_unpaired.fq.gz ERR2036633_2_reverse_paired.fq.gzILLUMINACLIP:/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
-TrimmomaticPE: Started with arguments:
- -phred33 /scratch/6135066/RNA_raw_data/ERR2036633_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036633_2.fastq.gz ERR2036633_1_output_forward_paired.fq.gz ERR2036633_1_output_forward_unpaired.fq.gz ERR2036633_2_reverse_paired.fq.gzILLUMINACLIP:/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
-Multiple cores found: Using 2 threads
-Exception in thread "main" java.io.FileNotFoundException: ERR2036633_2_reverse_paired.fq.gzILLUMINACLIP:/adapters/TruSeq3-PE.fa:2:30:10:2:True (No such file or directory)
+Exception in thread "main" java.io.FileNotFoundException: ERR2036630_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True (No such file or directory)
 	at java.io.FileOutputStream.open0(Native Method)
 	at java.io.FileOutputStream.open(FileOutputStream.java:270)
 	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
@@ -98,12 +87,43 @@ Exception in thread "main" java.io.FileNotFoundException: ERR2036633_2_reverse_p
 	at org.usadellab.trimmomatic.TrimmomaticPE.process(TrimmomaticPE.java:295)
 	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:555)
 	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
-+ trimmomatic PE -phred33 /scratch/6135066/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036629_2.fastq.gz ERR2036629_1_output_forward_paired.fq.gz ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
++ trimmomatic PE -phred33 /scratch/6139815/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036631_2.fastq.gz ERR2036631_1_output_forward_paired.fq.gz ERR2036631_1_output_forward_unpaired.fq.gz ERR2036631_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 TrimmomaticPE: Started with arguments:
- -phred33 /scratch/6135066/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6135066/RNA_raw_data/ERR2036629_2.fastq.gz ERR2036629_1_output_forward_paired.fq.gz ERR2036629_1_output_forward_unpaired.fq.gz ERR2036629_2_reverse_paired.fq.gzILLUMINACLIP: LEADING:3 TRAILING:3 MINLEN:36
+ -phred33 /scratch/6139815/RNA_raw_data/ERR2036629_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036631_2.fastq.gz ERR2036631_1_output_forward_paired.fq.gz ERR2036631_1_output_forward_unpaired.fq.gz ERR2036631_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
 Multiple cores found: Using 2 threads
-Input Read Pairs: 24278349 Both Surviving: 24114543 (99.33%) Forward Only Surviving: 153321 (0.63%) Reverse Only Surviving: 8456 (0.03%) Dropped: 2029 (0.01%)
-TrimmomaticPE: Completed successfully
-+ cp /scratch/6135066/output/ERR2036629_1_output_forward_paired.fq.gz /scratch/6135066/output/ERR2036629_1_output_forward_unpaired.fq.gz /scratch/6135066/output/ERR2036629_2_reverse_paired.fq.gz /scratch/6135066/output/ERR2036629_2_reverse_paired.fq.gzILLUMINACLIP: /scratch/6135066/output/ERR2036630_1_output_forward_paired.fq.gz /scratch/6135066/output/ERR2036630_1_output_forward_unpaired.fq.gz /scratch/6135066/output/ERR2036630_2_reverse_paired.fq.gzILLUMINACLIP: /scratch/6135066/output/ERR2036631_1_output_forward_paired.fq.gz /scratch/6135066/output/ERR2036631_1_output_forward_unpaired.fq.gz /scratch/6135066/output/ERR2036631_2_reverse_paired.fq.gzILLUMINACLIP: /scratch/6135066/output/ERR2036632_1_output_forward_paired.fq.gz /scratch/6135066/output/ERR2036632_1_output_forward_unpaired.fq.gz /scratch/6135066/output/ERR2036632_2_reverse_paired.fq.gzILLUMINACLIP: /scratch/6135066/output/ERR2036633_1_output_forward_paired.fq.gz /scratch/6135066/output/ERR2036633_1_output_forward_unpaired.fq.gz /scratch/6135066/output/ILLUMINACLIP: /scratch/6135066/output/LEADING:3 /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6135066
-cp: failed to close ‘/home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6135066/ERR2036631_2_reverse_paired.fq.gzILLUMINACLIP:’: Disk quota exceeded
-cp: failed to close ‘/home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6135066/ERR2036632_1_output_forward_paired.fq.gz’: Disk quota exceeded
+Exception in thread "main" java.io.FileNotFoundException: ERR2036631_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.usadellab.trimmomatic.fastq.FastqSerializer.open(FastqSerializer.java:28)
+	at org.usadellab.trimmomatic.TrimmomaticPE.process(TrimmomaticPE.java:295)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:555)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
++ trimmomatic PE -phred33 /scratch/6139815/RNA_raw_data/ERR2036632_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036632_2.fastq.gz ERR2036632_1_output_forward_paired.fq.gz ERR2036632_1_output_forward_unpaired.fq.gz ERR2036632_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -phred33 /scratch/6139815/RNA_raw_data/ERR2036632_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036632_2.fastq.gz ERR2036632_1_output_forward_paired.fq.gz ERR2036632_1_output_forward_unpaired.fq.gz ERR2036632_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
+Multiple cores found: Using 2 threads
+Exception in thread "main" java.io.FileNotFoundException: ERR2036632_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.usadellab.trimmomatic.fastq.FastqSerializer.open(FastqSerializer.java:28)
+	at org.usadellab.trimmomatic.TrimmomaticPE.process(TrimmomaticPE.java:295)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:555)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
++ trimmomatic PE -phred33 /scratch/6139815/RNA_raw_data/ERR2036633_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036633_2.fastq.gz ERR2036633_1_output_forward_paired.fq.gz ERR2036633_1_output_forward_unpaired.fq.gz ERR2036633_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
+TrimmomaticPE: Started with arguments:
+ -phred33 /scratch/6139815/RNA_raw_data/ERR2036633_1.fastq.gz /scratch/6139815/RNA_raw_data/ERR2036633_2.fastq.gz ERR2036633_1_output_forward_paired.fq.gz ERR2036633_1_output_forward_unpaired.fq.gz ERR2036633_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
+Multiple cores found: Using 2 threads
+Exception in thread "main" java.io.FileNotFoundException: ERR2036633_2_reverse_paired.fq.gzILLUMINACLIP:/home/erikpa/Genome_Analysis_Project_2022/Data/TruSeq3-PE.fa:2:30:10:2:True (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.usadellab.trimmomatic.fastq.FastqSerializer.open(FastqSerializer.java:28)
+	at org.usadellab.trimmomatic.TrimmomaticPE.process(TrimmomaticPE.java:295)
+	at org.usadellab.trimmomatic.TrimmomaticPE.run(TrimmomaticPE.java:555)
+	at org.usadellab.trimmomatic.Trimmomatic.main(Trimmomatic.java:80)
++ cp -r /scratch/6139815/output/ERR2036629_1_output_forward_paired.fq.gz /scratch/6139815/output/ERR2036629_1_output_forward_unpaired.fq.gz /scratch/6139815/output/ERR2036629_2_reverse_paired.fq.gz /scratch/6139815/output/ERR2036630_1_output_forward_paired.fq.gz /scratch/6139815/output/ERR2036630_1_output_forward_unpaired.fq.gz /scratch/6139815/output/ERR2036631_1_output_forward_paired.fq.gz /scratch/6139815/output/ERR2036631_1_output_forward_unpaired.fq.gz /scratch/6139815/output/ERR2036632_1_output_forward_paired.fq.gz /scratch/6139815/output/ERR2036632_1_output_forward_unpaired.fq.gz /scratch/6139815/output/ERR2036633_1_output_forward_paired.fq.gz /scratch/6139815/output/ERR2036633_1_output_forward_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6139815
