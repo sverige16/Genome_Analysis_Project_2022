@@ -8,11 +8,13 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
+# Using FastQC on Raw_Reads to analyze Raw Reads Quality 
+
 set -x
 
 # make new directory for FastQ files
-mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/test_$SLURM_JOB_ID
-cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/test_$SLURM_JOB_ID
+mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/FASTQtest_$SLURM_JOB_ID
+cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/FASTQtest_$SLURM_JOB_ID
 
 # copying multiple files to external directory 
 export SRCDIR=$HOME
@@ -38,8 +40,10 @@ done
 
 cd ..
 # Going into output
-cd $SNIC_TMP/output
-fastqc -f -o $SNIC_TMP/output -f fastq $SNIC_TMP/RNA_raw_data/*
+
+fastqc -o $SNIC_TMP/output -f fastq $SNIC_TMP/RNA_raw_data/*
+echo "display output"
+ls
 
 # Returning to external storage
-cp $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/test_$SLURM_JOB_ID
+cp $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/FASTQtest_$SLURM_JOB_ID

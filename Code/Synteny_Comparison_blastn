@@ -2,42 +2,26 @@
 #SBATCH -A uppmax2022-2-5
 #SBATCH -M snowy
 #SBATCH -p core
-#SBATCH -n 2
-#SBATCH -t 00:10:00
+#SBATCH -n 1
+#SBATCH -t 00:05:00
 #SBATCH -J Synten_Apr21
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
-# It works! Using Prokka for Structural and  to assess Genome Assembly Quality
+# It works! Using blastn to compare the assembled genome with a complete genome found from NCBI.
+# Does not use local storage because I could not get it to work
 set -x
 echo QOS = $SLURM_JOB_QOS
 
-# make new directory for Prokka output files
-mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/Synteny_$SLURM_JOB_ID
-cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/Synteny_$SLURM_JOB_ID
-
-# copying multiple files to external directory
-export SRCDIR=$HOME
-
-# making directory within storage node
-cd $SNIC_TMP
-mkdir Assembled_data
-mkdir reference_comparison_genome
-mkdir output
-
-# copying multiple files to external directory
-cp /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Assembled_data
-cp /home/erikpa/Genome_Analysis_Project_2022/Data/CP002919.1.fa $SNIC_TMP/reference_comparison_genome
+cd /home/erikpa/Genome_Analysis_Project_2022/Analysis
+mkdir blastn_$SLURM_JOB_ID
 
 # Load modules
 module load bioinfo-tools
 module load blast
 
 # Going into output
-cd $SNIC_TMP/output
-blastn -query $SNIC_TMP/Assembled_data/* -subject $SNIC_TMP/reference_comparison_genome
+cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/blastn_$SLURM_JOB_ID
 
-ls 
-
-# Returning to external storage
-cp -r $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/Synteny_$SLURM_JOB_ID
+blastn -query /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta \
+ -subject /home/erikpa/Genome_Analysis_Project_2022/Data/CP002919.1.fa -out blastn_results_$SLURM_JOB_ID -outfmt 7	
