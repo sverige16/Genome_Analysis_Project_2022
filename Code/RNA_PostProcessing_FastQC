@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 1
 #SBATCH -t 02:00:00
-#SBATCH -J RNA_Test_5_Apr
+#SBATCH -J Post_Trimmed_28_Apr
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
@@ -24,7 +24,7 @@ mkdir RNA_trimmed_data
 mkdir output
 
 # copying multiple files to external directory
-cp  /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6139839/*.fq* \
+cp  /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/*.fq* \
 $SNIC_TMP/RNA_trimmed_data
 
 # Load modules

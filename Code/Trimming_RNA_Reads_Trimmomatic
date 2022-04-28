@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 02:00:00
-#SBATCH -J RNA_Test_23_Apr
+#SBATCH -J Redoing_Trimmed_Reads_to_fix_paired_vs_unpaired_Test_28_Apr
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
@@ -45,7 +45,7 @@ $SNIC_TMP/RNA_raw_data/ERR2036629_2.fastq.gz \
 ERR2036629_1_output_forward_paired.fq.gz \
 ERR2036629_1_output_forward_unpaired.fq.gz \
 ERR2036629_2_output_reverse_paired.fq.gz \
-ERR2036629_2_output_reverse_paired.fq.gz \
+ERR2036629_2_output_reverse_unpaired.fq.gz \
 ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 trimmomatic PE -phred33 \
@@ -54,7 +54,7 @@ $SNIC_TMP/RNA_raw_data/ERR2036630_2.fastq.gz \
 ERR2036630_1_output_forward_paired.fq.gz \
 ERR2036630_1_output_forward_unpaired.fq.gz \
 ERR2036630_2_output_reverse_paired.fq.gz \
-ERR2036630_2_output_reverse_paired.fq.gz \
+ERR2036630_2_output_reverse_unpaired.fq.gz \
 ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 trimmomatic PE -phred33 \
@@ -63,7 +63,7 @@ $SNIC_TMP/RNA_raw_data/ERR2036631_2.fastq.gz \
 ERR2036631_1_output_forward_paired.fq.gz \
 ERR2036631_1_output_forward_unpaired.fq.gz \
 ERR2036631_2_output_reverse_paired.fq.gz \
-ERR2036631_2_output_reverse_paired.fq.gz \
+ERR2036631_2_output_reverse_unpaired.fq.gz \
 ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 trimmomatic PE -phred33 \
@@ -72,7 +72,7 @@ $SNIC_TMP/RNA_raw_data/ERR2036632_2.fastq.gz \
 ERR2036632_1_output_forward_paired.fq.gz \
 ERR2036632_1_output_forward_unpaired.fq.gz \
 ERR2036632_2_output_reverse_paired.fq.gz \
-ERR2036632_2_output_reverse_paired.fq.gz \
+ERR2036632_2_output_reverse_unpaired.fq.gz \
 ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 trimmomatic PE -phred33 \
@@ -81,7 +81,7 @@ $SNIC_TMP/RNA_raw_data/ERR2036633_2.fastq.gz \
 ERR2036633_1_output_forward_paired.fq.gz \
 ERR2036633_1_output_forward_unpaired.fq.gz \
 ERR2036633_2_output_reverse_paired.fq.gz \
-ERR2036633_2_output_reverse_paired.fq.gz \
+ERR2036633_2_output_reverse_unpaired.fq.gz \
 ILLUMINACLIP:$SNIC_TMP/adapter/TruSeq3-PE.fa:2:30:10 LEADING:3 TRAILING:3 MINLEN:36
 
 # Returning to external storage

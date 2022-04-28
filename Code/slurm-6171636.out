@@ -1,0 +1,407 @@
++ mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/FASTQ_posttrim_6171636
++ cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/FASTQ_posttrim_6171636
++ export SRCDIR=/home/erikpa
++ SRCDIR=/home/erikpa
++ cd /scratch/6171636
++ mkdir RNA_trimmed_data
++ mkdir output
++ cp /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036629_1_output_forward_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036629_1_output_forward_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036629_2_output_reverse_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036629_2_output_reverse_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036630_1_output_forward_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036630_1_output_forward_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036630_2_output_reverse_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036630_2_output_reverse_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036631_1_output_forward_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036631_1_output_forward_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036631_2_output_reverse_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036631_2_output_reverse_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036632_1_output_forward_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036632_1_output_forward_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036632_2_output_reverse_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036632_2_output_reverse_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036633_1_output_forward_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036633_1_output_forward_unpaired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036633_2_output_reverse_paired.fq.gz /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6171365/ERR2036633_2_output_reverse_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data
++ module load bioinfo-tools
+++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:1\;/sw/mf/snowy/bioinfo-tools/alignment:1\;/sw/mf/snowy/bioinfo-tools/assembly:1\;/sw/mf/snowy/bioinfo-tools/misc:1\;/sw/mf/snowy/bioinfo-tools/phylogeny:1\;/sw/mf/snowy/bioinfo-tools/pipelines:1\;/sw/mf/snowy/bioinfo-tools/sw_collections:1\;/sw/mf/snowy/applications:1\;/sw/mf/snowy/build-tools:1\;/sw/mf/snowy/compilers:1\;/sw/mf/snowy/data:1\;/sw/mf/snowy/environment:1\;/sw/mf/snowy/libraries:1\;/sw/mf/snowy/parallel:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv;' export '_ModuleTable001_;' '_ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI;' export '_ModuleTable002_;' '_ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MODULEPATH='/sw/mf/snowy/bioinfo-tools/annotation:1;/sw/mf/snowy/bioinfo-tools/alignment:1;/sw/mf/snowy/bioinfo-tools/assembly:1;/sw/mf/snowy/bioinfo-tools/misc:1;/sw/mf/snowy/bioinfo-tools/phylogeny:1;/sw/mf/snowy/bioinfo-tools/pipelines:1;/sw/mf/snowy/bioinfo-tools/sw_collections:1;/sw/mf/snowy/applications:1;/sw/mf/snowy/build-tools:1;/sw/mf/snowy/compilers:1;/sw/mf/snowy/data:1;/sw/mf/snowy/environment:1;/sw/mf/snowy/libraries:1;/sw/mf/snowy/parallel:1'
+++ export __LMOD_REF_COUNT_MODULEPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI
+++ export _ModuleTable002_
+++ _ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load FastQC
+++ /usr/share/lmod/lmod/libexec/lmod bash load FastQC
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1\;FastQC/0.11.9:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:FastQC/0.11.9;' export 'LOADEDMODULES;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/FastQC/0.11.9/snowy:1\;/home/erikpa/bin:2\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/FastQC/0.11.9/snowy:/home/erikpa/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sw/uppmax/bin;' export 'PATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtGYXN0UUM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9GYXN0UUMvMC4xMS45IixbImZ1bGxOYW1lIl09IkZhc3RRQy8wLjExLjkiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJGYXN0UUMiLH0sWyJiaW9pbmZvLXRvb2xzIl09e1siZm4iXT0iL3N3L21mL3Nub3d5L2Vudmlyb25tZW50L2Jpb2luZm8tdG9vbHMiLFsiZnVsbE5hbWUiXT0iYmlvaW5mby10b29scyIsWyJsb2FkT3Jk;' export '_ModuleTable001_;' '_ModuleTable002_=ZXIiXT0xLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImJpb2luZm8tdG9vbHMiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNzZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29sbGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBw;' export '_ModuleTable002_;' '_ModuleTable003_=bGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1;FastQC/0.11.9:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:FastQC/0.11.9
+++ export LOADEDMODULES
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/FastQC/0.11.9/snowy:1;/home/erikpa/bin:2;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/FastQC/0.11.9/snowy:/home/erikpa/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sw/uppmax/bin
+++ export PATH
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtGYXN0UUM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9GYXN0UUMvMC4xMS45IixbImZ1bGxOYW1lIl09IkZhc3RRQy8wLjExLjkiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJGYXN0UUMiLH0sWyJiaW9pbmZvLXRvb2xzIl09e1siZm4iXT0iL3N3L21mL3Nub3d5L2Vudmlyb25tZW50L2Jpb2luZm8tdG9vbHMiLFsiZnVsbE5hbWUiXT0iYmlvaW5mby10b29scyIsWyJsb2FkT3Jk
+++ export _ModuleTable001_
+++ _ModuleTable002_=ZXIiXT0xLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImJpb2luZm8tdG9vbHMiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNzZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29sbGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBw
+++ export _ModuleTable002_
+++ _ModuleTable003_=bGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ fastqc -o /scratch/6171636/output -f fastq /scratch/6171636/RNA_trimmed_data/ERR2036629_1_output_forward_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036629_1_output_forward_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036629_2_output_reverse_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036629_2_output_reverse_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036630_1_output_forward_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036630_1_output_forward_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036630_2_output_reverse_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036630_2_output_reverse_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036631_1_output_forward_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036631_1_output_forward_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036631_2_output_reverse_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036631_2_output_reverse_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036632_1_output_forward_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036632_1_output_forward_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036632_2_output_reverse_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036632_2_output_reverse_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036633_1_output_forward_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036633_1_output_forward_unpaired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036633_2_output_reverse_paired.fq.gz /scratch/6171636/RNA_trimmed_data/ERR2036633_2_output_reverse_unpaired.fq.gz
+Started analysis of ERR2036629_1_output_forward_paired.fq.gz
+Approx 5% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 10% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 15% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 20% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 25% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 30% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 35% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 40% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 45% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 50% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 55% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 60% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 65% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 70% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 75% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 80% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 85% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 90% complete for ERR2036629_1_output_forward_paired.fq.gz
+Approx 95% complete for ERR2036629_1_output_forward_paired.fq.gz
+Analysis complete for ERR2036629_1_output_forward_paired.fq.gz
+Started analysis of ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 5% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 10% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 15% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 20% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 25% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 30% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 35% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 40% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 45% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 50% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 55% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 60% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 65% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 70% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 75% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 80% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 85% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 90% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Approx 95% complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Analysis complete for ERR2036629_1_output_forward_unpaired.fq.gz
+Started analysis of ERR2036629_2_output_reverse_paired.fq.gz
+Approx 5% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 10% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 15% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 20% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 25% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 30% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 35% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 40% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 45% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 50% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 55% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 60% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 65% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 70% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 75% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 80% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 85% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 90% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Approx 95% complete for ERR2036629_2_output_reverse_paired.fq.gz
+Analysis complete for ERR2036629_2_output_reverse_paired.fq.gz
+Started analysis of ERR2036629_2_output_reverse_unpaired.fq.gz
+Approx 10% complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Approx 25% complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Approx 35% complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Approx 50% complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Approx 65% complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Approx 75% complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Approx 90% complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Analysis complete for ERR2036629_2_output_reverse_unpaired.fq.gz
+Started analysis of ERR2036630_1_output_forward_paired.fq.gz
+Approx 5% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 10% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 15% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 20% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 25% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 30% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 35% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 40% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 45% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 50% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 55% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 60% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 65% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 70% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 75% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 80% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 85% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 90% complete for ERR2036630_1_output_forward_paired.fq.gz
+Approx 95% complete for ERR2036630_1_output_forward_paired.fq.gz
+Analysis complete for ERR2036630_1_output_forward_paired.fq.gz
+Started analysis of ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 5% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 10% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 15% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 20% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 25% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 30% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 35% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 40% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 45% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 50% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 55% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 60% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 65% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 70% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 75% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 80% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 85% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 90% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Approx 95% complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Analysis complete for ERR2036630_1_output_forward_unpaired.fq.gz
+Started analysis of ERR2036630_2_output_reverse_paired.fq.gz
+Approx 5% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 10% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 15% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 20% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 25% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 30% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 35% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 40% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 45% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 50% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 55% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 60% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 65% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 70% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 75% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 80% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 85% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 90% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Approx 95% complete for ERR2036630_2_output_reverse_paired.fq.gz
+Analysis complete for ERR2036630_2_output_reverse_paired.fq.gz
+Started analysis of ERR2036630_2_output_reverse_unpaired.fq.gz
+Approx 15% complete for ERR2036630_2_output_reverse_unpaired.fq.gz
+Approx 30% complete for ERR2036630_2_output_reverse_unpaired.fq.gz
+Approx 50% complete for ERR2036630_2_output_reverse_unpaired.fq.gz
+Approx 65% complete for ERR2036630_2_output_reverse_unpaired.fq.gz
+Approx 80% complete for ERR2036630_2_output_reverse_unpaired.fq.gz
+Approx 95% complete for ERR2036630_2_output_reverse_unpaired.fq.gz
+Analysis complete for ERR2036630_2_output_reverse_unpaired.fq.gz
+Started analysis of ERR2036631_1_output_forward_paired.fq.gz
+Approx 5% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 10% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 15% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 20% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 25% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 30% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 35% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 40% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 45% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 50% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 55% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 60% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 65% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 70% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 75% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 80% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 85% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 90% complete for ERR2036631_1_output_forward_paired.fq.gz
+Approx 95% complete for ERR2036631_1_output_forward_paired.fq.gz
+Analysis complete for ERR2036631_1_output_forward_paired.fq.gz
+Started analysis of ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 5% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 10% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 15% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 20% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 25% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 30% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 35% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 40% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 45% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 50% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 55% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 60% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 65% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 70% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 75% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 80% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 85% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 90% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Approx 95% complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Analysis complete for ERR2036631_1_output_forward_unpaired.fq.gz
+Started analysis of ERR2036631_2_output_reverse_paired.fq.gz
+Approx 5% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 10% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 15% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 20% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 25% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 30% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 35% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 40% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 45% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 50% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 55% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 60% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 65% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 70% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 75% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 80% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 85% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 90% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Approx 95% complete for ERR2036631_2_output_reverse_paired.fq.gz
+Analysis complete for ERR2036631_2_output_reverse_paired.fq.gz
+Started analysis of ERR2036631_2_output_reverse_unpaired.fq.gz
+Analysis complete for ERR2036631_2_output_reverse_unpaired.fq.gz
+Started analysis of ERR2036632_1_output_forward_paired.fq.gz
+Approx 5% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 10% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 15% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 20% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 25% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 30% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 35% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 40% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 45% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 50% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 55% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 60% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 65% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 70% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 75% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 80% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 85% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 90% complete for ERR2036632_1_output_forward_paired.fq.gz
+Approx 95% complete for ERR2036632_1_output_forward_paired.fq.gz
+Analysis complete for ERR2036632_1_output_forward_paired.fq.gz
+Started analysis of ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 5% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 10% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 15% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 20% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 25% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 30% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 35% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 40% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 45% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 50% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 55% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 60% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 65% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 70% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 75% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 80% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 85% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 90% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Approx 95% complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Analysis complete for ERR2036632_1_output_forward_unpaired.fq.gz
+Started analysis of ERR2036632_2_output_reverse_paired.fq.gz
+Approx 5% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 10% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 15% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 20% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 25% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 30% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 35% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 40% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 45% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 50% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 55% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 60% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 65% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 70% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 75% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 80% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 85% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 90% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Approx 95% complete for ERR2036632_2_output_reverse_paired.fq.gz
+Analysis complete for ERR2036632_2_output_reverse_paired.fq.gz
+Started analysis of ERR2036632_2_output_reverse_unpaired.fq.gz
+Analysis complete for ERR2036632_2_output_reverse_unpaired.fq.gz
+Started analysis of ERR2036633_1_output_forward_paired.fq.gz
+Approx 5% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 10% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 15% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 20% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 25% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 30% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 35% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 40% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 45% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 50% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 55% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 60% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 65% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 70% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 75% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 80% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 85% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 90% complete for ERR2036633_1_output_forward_paired.fq.gz
+Approx 95% complete for ERR2036633_1_output_forward_paired.fq.gz
+Analysis complete for ERR2036633_1_output_forward_paired.fq.gz
+Started analysis of ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 5% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 10% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 15% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 20% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 25% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 30% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 35% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 40% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 45% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 50% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 55% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 60% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 65% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 70% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 75% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 80% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 85% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 90% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Approx 95% complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Analysis complete for ERR2036633_1_output_forward_unpaired.fq.gz
+Started analysis of ERR2036633_2_output_reverse_paired.fq.gz
+Approx 5% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 10% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 15% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 20% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 25% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 30% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 35% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 40% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 45% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 50% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 55% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 60% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 65% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 70% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 75% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 80% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 85% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 90% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Approx 95% complete for ERR2036633_2_output_reverse_paired.fq.gz
+Analysis complete for ERR2036633_2_output_reverse_paired.fq.gz
+Started analysis of ERR2036633_2_output_reverse_unpaired.fq.gz
+Approx 15% complete for ERR2036633_2_output_reverse_unpaired.fq.gz
+Approx 25% complete for ERR2036633_2_output_reverse_unpaired.fq.gz
+Approx 40% complete for ERR2036633_2_output_reverse_unpaired.fq.gz
+Approx 55% complete for ERR2036633_2_output_reverse_unpaired.fq.gz
+Approx 70% complete for ERR2036633_2_output_reverse_unpaired.fq.gz
+Approx 85% complete for ERR2036633_2_output_reverse_unpaired.fq.gz
+Approx 95% complete for ERR2036633_2_output_reverse_unpaired.fq.gz
+Analysis complete for ERR2036633_2_output_reverse_unpaired.fq.gz
++ cp /scratch/6171636/output/ERR2036629_1_output_forward_paired_fastqc.html /scratch/6171636/output/ERR2036629_1_output_forward_paired_fastqc.zip /scratch/6171636/output/ERR2036629_1_output_forward_unpaired_fastqc.html /scratch/6171636/output/ERR2036629_1_output_forward_unpaired_fastqc.zip /scratch/6171636/output/ERR2036629_2_output_reverse_paired_fastqc.html /scratch/6171636/output/ERR2036629_2_output_reverse_paired_fastqc.zip /scratch/6171636/output/ERR2036629_2_output_reverse_unpaired_fastqc.html /scratch/6171636/output/ERR2036629_2_output_reverse_unpaired_fastqc.zip /scratch/6171636/output/ERR2036630_1_output_forward_paired_fastqc.html /scratch/6171636/output/ERR2036630_1_output_forward_paired_fastqc.zip /scratch/6171636/output/ERR2036630_1_output_forward_unpaired_fastqc.html /scratch/6171636/output/ERR2036630_1_output_forward_unpaired_fastqc.zip /scratch/6171636/output/ERR2036630_2_output_reverse_paired_fastqc.html /scratch/6171636/output/ERR2036630_2_output_reverse_paired_fastqc.zip /scratch/6171636/output/ERR2036630_2_output_reverse_unpaired_fastqc.html /scratch/6171636/output/ERR2036630_2_output_reverse_unpaired_fastqc.zip /scratch/6171636/output/ERR2036631_1_output_forward_paired_fastqc.html /scratch/6171636/output/ERR2036631_1_output_forward_paired_fastqc.zip /scratch/6171636/output/ERR2036631_1_output_forward_unpaired_fastqc.html /scratch/6171636/output/ERR2036631_1_output_forward_unpaired_fastqc.zip /scratch/6171636/output/ERR2036631_2_output_reverse_paired_fastqc.html /scratch/6171636/output/ERR2036631_2_output_reverse_paired_fastqc.zip /scratch/6171636/output/ERR2036631_2_output_reverse_unpaired_fastqc.html /scratch/6171636/output/ERR2036631_2_output_reverse_unpaired_fastqc.zip /scratch/6171636/output/ERR2036632_1_output_forward_paired_fastqc.html /scratch/6171636/output/ERR2036632_1_output_forward_paired_fastqc.zip /scratch/6171636/output/ERR2036632_1_output_forward_unpaired_fastqc.html /scratch/6171636/output/ERR2036632_1_output_forward_unpaired_fastqc.zip /scratch/6171636/output/ERR2036632_2_output_reverse_paired_fastqc.html /scratch/6171636/output/ERR2036632_2_output_reverse_paired_fastqc.zip /scratch/6171636/output/ERR2036632_2_output_reverse_unpaired_fastqc.html /scratch/6171636/output/ERR2036632_2_output_reverse_unpaired_fastqc.zip /scratch/6171636/output/ERR2036633_1_output_forward_paired_fastqc.html /scratch/6171636/output/ERR2036633_1_output_forward_paired_fastqc.zip /scratch/6171636/output/ERR2036633_1_output_forward_unpaired_fastqc.html /scratch/6171636/output/ERR2036633_1_output_forward_unpaired_fastqc.zip /scratch/6171636/output/ERR2036633_2_output_reverse_paired_fastqc.html /scratch/6171636/output/ERR2036633_2_output_reverse_paired_fastqc.zip /scratch/6171636/output/ERR2036633_2_output_reverse_unpaired_fastqc.html /scratch/6171636/output/ERR2036633_2_output_reverse_unpaired_fastqc.zip /home/erikpa/Genome_Analysis_Project_2022/Analysis/FASTQ_posttrim_6171636
