@@ -1,0 +1,52 @@
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 08:00:00
+#SBATCH -J BWA_May6th
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user erikspencereverett@gmail.com
+
+# Using BWA to map and align RNA reads onto Assembled Genome to assess.
+set -x
+# make new directory for FastQ files
+mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/BWA_$SLURM_JOB_ID
+cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/BWA_$SLURM_JOB_ID
+
+# copying multiple files to external directory 
+export SRCDIR=$HOME
+
+# making directory within storage node
+cd $SNIC_TMP
+mkdir Assembled_data
+mkdir Trimmed_RNA_Reads
+mkdir output
+
+# copying multiple files to external directory
+cp  /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Assembled_data
+cp  /home/erikpa/Genome_Analysis_Project_2022/Analysis/Trimming_Raw_Reads_Trimmomatic_6186484/*paired* $SNIC_TMP/Trimmed_RNA_Reads
+ 
+# Load modules
+module load bioinfo-tools
+module load bwa
+
+# Going into output
+cd $SNIC_TMP/Assembled_data/*
+ls
+bwa index $SNIC_TMP/Assembled_data/* 
+ls
+bwa mem -t 2 $SNIC_TMP/Assembled_data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Trimmed_RNA_Reads/ERR2036629_1_output_forward_paired.fq.gz $SNIC_TMP/Trimmed_RNA_Reads/ERR2036629_2_output_reverse_paired.fq.gz > ERR2036629.sam
+bwa mem -t 2 $SNIC_TMP/Assembled_data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Trimmed_RNA_Reads/ERR2036630_1_output_forward_paired.fq.gz $SNIC_TMP/Trimmed_RNA_Reads/ERR2036630_2_output_reverse_paired.fq.gz > ERR2036630.sam
+bwa mem -t 2 $SNIC_TMP/Assembled_data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Trimmed_RNA_Reads/ERR2036631_1_output_forward_paired.fq.gz $SNIC_TMP/Trimmed_RNA_Reads/ERR2036631_2_output_reverse_paired.fq.gz > ERR2036631.sam
+bwa mem -t 2 $SNIC_TMP/Assembled_data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Trimmed_RNA_Reads/ERR2036632_1_output_forward_paired.fq.gz $SNIC_TMP/Trimmed_RNA_Reads/ERR2036632_2_output_reverse_paired.fq.gz > ERR2036632.sam
+bwa mem -t 2 $SNIC_TMP/Assembled_data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Trimmed_RNA_Reads/ERR2036633_1_output_forward_paired.fq.gz $SNIC_TMP/Trimmed_RNA_Reads/ERR2036633_2_output_reverse_paired.fq.gz > ERR2036633.sam
+
+# Samtools Indexing
+for z in /home/erikpa/Assignment1_BigData/*.sam
+do
+  	echo "$z"
+        samtools view -S -b "$(basename $z .sam)".bam
+
+# Returning to external storage
+cp $SNIC_TMP/output/*bam /home/erikpa/Genome_Analysis_Project_2022/Analysis/BWA__$SLURM_JOB_ID

@@ -8,7 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
-# Using FastQC on all Trimmed Reads
+# Using FastQC on all of the Trimmed Reads
 set -x
 
 # make new directory for FastQ files

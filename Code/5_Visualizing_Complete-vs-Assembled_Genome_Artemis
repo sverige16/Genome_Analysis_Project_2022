@@ -1,0 +1,6 @@
+# The steps in code in order to visualize in artemis
+# 1 Use ssh -AX to log into Uppmax
+# 2 interactive -M snowy -A uppmax2022-2-5
+# 3 module load bioinfo-tools artemis
+# 4 act (starts visualizing software)
+# 5 Follow instructions

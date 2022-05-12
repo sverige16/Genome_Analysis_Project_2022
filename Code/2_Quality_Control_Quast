@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 1
 #SBATCH -t 00:15:00
-#SBATCH -J QualityControl_8_Apr
+#SBATCH -J QualityControl__May_6
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
