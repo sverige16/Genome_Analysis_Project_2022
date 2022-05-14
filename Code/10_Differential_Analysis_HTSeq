@@ -8,13 +8,13 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
-# Using HTSeq-counts to do differential analysis
+#Final  Using HTSeq-counts to do differential analysis
 set -x
 echo QOS = $SLURM_JOB_QOS
 
 # make new directory for FastQ files
-mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/htseq_$SLURM_JOB_ID
-cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/htseq_$SLURM_JOB_ID
+mkdir /proj/genomeanalysis2022/nobackup/work/erikpalm/htseq_$SLURM_JOB_ID
+cd /proj/genomeanalysis2022/nobackup/work/erikpalm/htseq_$SLURM_JOB_ID
 
 # copying multiple files to external directory 
 export SRCDIR=$HOME
@@ -29,7 +29,7 @@ mkdir Assembled_data
 # copying multiple files to external directory
 cp  /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_6186474/PROKKA_05062022/PROKKA_04192022_withoutfasta.gff \
 $SNIC_TMP/Prokka_gff
-cp  /home/erikpa/Genome_Analysis_Project_2022/Analysis/BWA_6171668/* $SNIC_TMP/Mapping
+cp  /home/erikpa/Genome_Analysis_Project_2022/Analysis/BWA_6188139/* $SNIC_TMP/Mapping
 cp  /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Assembled_data 
 
 # Load modules
@@ -60,4 +60,4 @@ htseq-count -f bam -s no -i ID  -r pos -t CDS $SNIC_TMP/Mapping/ERR2036629_sorte
 
 
 # Returning to external storage
-cp $SNIC_TMP/Mapping/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/htseq_$SLURM_JOB_ID
+cp $SNIC_TMP/Mapping/* /proj/genomeanalysis2022/nobackup/work/erikpalm/htseq_$SLURM_JOB_ID

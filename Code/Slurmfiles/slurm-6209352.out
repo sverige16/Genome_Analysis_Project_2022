@@ -1,0 +1,504 @@
++ echo QOS = normal
+QOS = normal
++ mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_ref_6209352
++ cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_ref_6209352
++ export SRCDIR=/home/erikpa
++ SRCDIR=/home/erikpa
++ cd /scratch/6209352
++ mkdir Assembled_data
++ mkdir output
++ cp /home/erikpa/Genome_Analysis_Project_2022/Data/CP002919.1.fa /scratch/6209352/Assembled_data
++ module load bioinfo-tools
+++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:1\;/sw/mf/snowy/bioinfo-tools/alignment:1\;/sw/mf/snowy/bioinfo-tools/assembly:1\;/sw/mf/snowy/bioinfo-tools/misc:1\;/sw/mf/snowy/bioinfo-tools/phylogeny:1\;/sw/mf/snowy/bioinfo-tools/pipelines:1\;/sw/mf/snowy/bioinfo-tools/sw_collections:1\;/sw/mf/snowy/applications:1\;/sw/mf/snowy/build-tools:1\;/sw/mf/snowy/compilers:1\;/sw/mf/snowy/data:1\;/sw/mf/snowy/environment:1\;/sw/mf/snowy/libraries:1\;/sw/mf/snowy/parallel:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv;' export '_ModuleTable001_;' '_ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI;' export '_ModuleTable002_;' '_ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MODULEPATH='/sw/mf/snowy/bioinfo-tools/annotation:1;/sw/mf/snowy/bioinfo-tools/alignment:1;/sw/mf/snowy/bioinfo-tools/assembly:1;/sw/mf/snowy/bioinfo-tools/misc:1;/sw/mf/snowy/bioinfo-tools/phylogeny:1;/sw/mf/snowy/bioinfo-tools/pipelines:1;/sw/mf/snowy/bioinfo-tools/sw_collections:1;/sw/mf/snowy/applications:1;/sw/mf/snowy/build-tools:1;/sw/mf/snowy/compilers:1;/sw/mf/snowy/data:1;/sw/mf/snowy/environment:1;/sw/mf/snowy/libraries:1;/sw/mf/snowy/parallel:1'
+++ export __LMOD_REF_COUNT_MODULEPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI
+++ export _ModuleTable002_
+++ _ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load prokka
+++ /usr/share/lmod/lmod/libexec/lmod bash load prokka
++ eval 'BLASTDATA_ROOT=/sw/data/blast_databases;' export 'BLASTDATA_ROOT;' 'BLASTDB=/sw/data/blast_databases;' export 'BLASTDB;' 'BLASTPLUSDIR=/sw/bioinfo/blast/2.11.0+/snowy/bin;' export 'BLASTPLUSDIR;' 'BLAST_DOC=/sw/bioinfo/blast/2.11.0+/snowy/doc;' export 'BLAST_DOC;' 'BLAST_ROOT=/sw/bioinfo/blast/2.11.0+/snowy;' export 'BLAST_ROOT;' 'HMMER_HOME=/sw/apps/bioinfo/hmmer/3.1b2/snowy;' export 'HMMER_HOME;' '__LMOD_REF_COUNT_LD_LIBRARY_PATH=/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:1\;/sw/comp/perl_modules/5.24.1/snowy/lib:1;' export '__LMOD_REF_COUNT_LD_LIBRARY_PATH;' 'LD_LIBRARY_PATH=/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:/sw/comp/perl_modules/5.24.1/snowy/lib;' export 'LD_LIBRARY_PATH;' '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1\;gnuparallel/20170122:1\;perl/5.24.1:1\;perl_modules/5.24.1:1\;BioPerl/1.7.1_Perl5.24.1:1\;blast_databases/latest:1\;blast/2.11.0+:1\;hmmer/3.1b2:1\;aragorn/1.2.38:1\;prodigal/2.6.3:1\;tbl2asn/25.8:1\;SignalP/4.1f:1\;barrnap/0.8:1\;minced/0.2.0:1\;prokka/1.45-5b58020:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:gnuparallel/20170122:perl/5.24.1:perl_modules/5.24.1:BioPerl/1.7.1_Perl5.24.1:blast_databases/latest:blast/2.11.0+:hmmer/3.1b2:aragorn/1.2.38:prodigal/2.6.3:tbl2asn/25.8:SignalP/4.1f:barrnap/0.8:minced/0.2.0:prokka/1.45-5b58020;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH=/sw/bioinfo/prokka/1.45-5b58020/snowy/man:1\;/sw/bioinfo/SignalP/4.1f/snowy/man:1\;/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:1\;/sw/comp/perl/5.24.1/snowy/man:1\;/sw/parallel/gnuparallel/20170122/snowy/share/man:1\;/usr/share/man:2\;/sw/uppmax/man:2\;/opt/thinlinc/share/man:2\;/sw/comp/perl_modules/5.24.1/snowy/man:1\;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:1\;/sw/apps/bioinfo/hmmer/3.1b2/snowy/man:1;' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH=/sw/bioinfo/prokka/1.45-5b58020/snowy/man:/sw/bioinfo/SignalP/4.1f/snowy/man:/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:/sw/comp/perl/5.24.1/snowy/man:/sw/parallel/gnuparallel/20170122/snowy/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.24.1/snowy/man:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:/sw/apps/bioinfo/hmmer/3.1b2/snowy/man;' export 'MANPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:1\;/sw/apps/bioinfo/minced/0.2.0/snowy:1\;/sw/bioinfo/barrnap/0.8/snowy/bin:1\;/sw/bioinfo/SignalP/4.1f/snowy:1\;/sw/bioinfo/tbl2asn/25.8/snowy:1\;/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:1\;/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:1\;/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:1\;/sw/bioinfo/blast/2.11.0+/snowy/bin:1\;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:1\;/sw/comp/perl_modules/5.24.1/snowy/bin:1\;/sw/comp/perl/5.24.1/snowy/bin:1\;/sw/parallel/gnuparallel/20170122/snowy/bin:1\;/home/erikpa/bin:2\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:/sw/apps/bioinfo/minced/0.2.0/snowy:/sw/bioinfo/barrnap/0.8/snowy/bin:/sw/bioinfo/SignalP/4.1f/snowy:/sw/bioinfo/tbl2asn/25.8/snowy:/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:/sw/bioinfo/blast/2.11.0+/snowy/bin:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:/sw/comp/perl_modules/5.24.1/snowy/bin:/sw/comp/perl/5.24.1/snowy/bin:/sw/parallel/gnuparallel/20170122/snowy/bin:/home/erikpa/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sw/uppmax/bin;' export 'PATH;' '__LMOD_REF_COUNT_PERL5LIB=/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5:1\;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:1\;/sw/comp/perl_modules/5.24.1/snowy/lib/perl5:1\;/sw/comp/perl_modules/5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:1\;/sw/comp/perl/5.24.1/snowy/lib:1;' export '__LMOD_REF_COUNT_PERL5LIB;' 'PERL5LIB=/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl_modules/5.24.1/snowy/lib/perl5:/sw/comp/perl_modules/5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.24.1/snowy/lib;' export 'PERL5LIB;' 'SIGNALP_ROOT=/sw/bioinfo/SignalP/4.1f/snowy;' export 'SIGNALP_ROOT;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/parallel/gnuparallel/20170122:1\;/sw/mf/snowy/compilers/perl/5.24.1:1\;/sw/mf/snowy/compilers/perl_modules/5.24.1:1\;/sw/mf/snowy/bioinfo-tools/misc/BioPerl/1.7.1_Perl5.24.1:1\;/sw/mf/snowy/data/blast_databases/latest:1\;/sw/mf/snowy/bioinfo-tools/alignment/blast/2.11.0+:1\;/sw/mf/snowy/bioinfo-tools/alignment/hmmer/3.1b2:1\;/sw/mf/snowy/bioinfo-tools/alignment/aragorn/1.2.38:1\;/sw/mf/snowy/bioinfo-tools/misc/prodigal/2.6.3:1\;/sw/mf/snowy/bioinfo-tools/misc/tbl2asn/25.8:1\;/sw/mf/snowy/bioinfo-tools/annotation/SignalP/4.1f:1\;/sw/mf/snowy/bioinfo-tools/alignment/barrnap/0.8:1\;/sw/mf/snowy/bioinfo-tools/alignment/minced/0.2.0:1\;/sw/mf/snowy/bioinfo-tools/annotation/prokka/1.45-5b58020:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/parallel/gnuparallel/20170122:/sw/mf/snowy/compilers/perl/5.24.1:/sw/mf/snowy/compilers/perl_modules/5.24.1:/sw/mf/snowy/bioinfo-tools/misc/BioPerl/1.7.1_Perl5.24.1:/sw/mf/snowy/data/blast_databases/latest:/sw/mf/snowy/bioinfo-tools/alignment/blast/2.11.0+:/sw/mf/snowy/bioinfo-tools/alignment/hmmer/3.1b2:/sw/mf/snowy/bioinfo-tools/alignment/aragorn/1.2.38:/sw/mf/snowy/bioinfo-tools/misc/prodigal/2.6.3:/sw/mf/snowy/bioinfo-tools/misc/tbl2asn/25.8:/sw/mf/snowy/bioinfo-tools/annotation/SignalP/4.1f:/sw/mf/snowy/bioinfo-tools/alignment/barrnap/0.8:/sw/mf/snowy/bioinfo-tools/alignment/minced/0.2.0:/sw/mf/snowy/bioinfo-tools/annotation/prokka/1.45-5b58020;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtCaW9QZXJsPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvQmlvUGVybC8xLjcuMV9QZXJsNS4yNC4xIixbImZ1bGxOYW1lIl09IkJpb1BlcmwvMS43LjFfUGVybDUuMjQuMSIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IkJpb1BlcmwvMS43LjFfUGVybDUuMjQuMSIsfSxTaWduYWxQPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24vU2lnbmFsUC80;' export '_ModuleTable001_;' '_ModuleTable002_=LjFmIixbImZ1bGxOYW1lIl09IlNpZ25hbFAvNC4xZiIsWyJsb2FkT3JkZXIiXT0xMixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJTaWduYWxQLzQuMWYiLH0sYXJhZ29ybj17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQvYXJhZ29ybi8xLjIuMzgiLFsiZnVsbE5hbWUiXT0iYXJhZ29ybi8xLjIuMzgiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJhcmFnb3JuLzEuMi4zOCIsfSxiYXJybmFwPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2FsaWdubWVudC9iYXJybmFwLzAu;' export '_ModuleTable002_;' '_ModuleTable003_=OCIsWyJmdWxsTmFtZSJdPSJiYXJybmFwLzAuOCIsWyJsb2FkT3JkZXIiXT0xMyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiYXJybmFwLzAuOCIsfSxbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxibGFzdD17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQvYmxhc3QvMi4xMS4wKyIsWyJmdWxs;' export '_ModuleTable003_;' '_ModuleTable004_=TmFtZSJdPSJibGFzdC8yLjExLjArIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmxhc3QvMi4xMS4wKyIsfSxibGFzdF9kYXRhYmFzZXM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2RhdGEvYmxhc3RfZGF0YWJhc2VzL2xhdGVzdCIsWyJmdWxsTmFtZSJdPSJibGFzdF9kYXRhYmFzZXMvbGF0ZXN0IixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MixbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmxhc3RfZGF0YWJhc2VzL2xhdGVzdCIsfSxnbnVwYXJhbGxlbD17WyJmbiJdPSIvc3cvbWYvc25vd3kvcGFyYWxsZWwvZ251cGFyYWxsZWwvMjAxNzAx;' export '_ModuleTable004_;' '_ModuleTable005_=MjIiLFsiZnVsbE5hbWUiXT0iZ251cGFyYWxsZWwvMjAxNzAxMjIiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJnbnVwYXJhbGxlbC8yMDE3MDEyMiIsfSxobW1lcj17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQvaG1tZXIvMy4xYjIiLFsiZnVsbE5hbWUiXT0iaG1tZXIvMy4xYjIiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJobW1lci8zLjFiMiIsfSxtaW5jZWQ9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50L21pbmNlZC8w;' export '_ModuleTable005_;' '_ModuleTable006_=LjIuMCIsWyJmdWxsTmFtZSJdPSJtaW5jZWQvMC4yLjAiLFsibG9hZE9yZGVyIl09MTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWluY2VkLzAuMi4wIix9LHBlcmw9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsLzUuMjQuMSIsWyJmdWxsTmFtZSJdPSJwZXJsLzUuMjQuMSIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0zLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsLzUuMjQuMSIsfSxwZXJsX21vZHVsZXM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsX21vZHVsZXMvNS4yNC4xIixbImZ1bGxO;' export '_ModuleTable006_;' '_ModuleTable007_=YW1lIl09InBlcmxfbW9kdWxlcy81LjI0LjEiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsX21vZHVsZXMvNS4yNC4xIix9LHByb2RpZ2FsPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvcHJvZGlnYWwvMi42LjMiLFsiZnVsbE5hbWUiXT0icHJvZGlnYWwvMi42LjMiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZGlnYWwvMi42LjMiLH0scHJva2thPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24vcHJva2thLzEuNDUt;' export '_ModuleTable007_;' '_ModuleTable008_=NWI1ODAyMCIsWyJmdWxsTmFtZSJdPSJwcm9ra2EvMS40NS01YjU4MDIwIixbImxvYWRPcmRlciJdPTE1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InByb2trYSIsfSx0YmwyYXNuPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvdGJsMmFzbi8yNS44IixbImZ1bGxOYW1lIl09InRibDJhc24vMjUuOCIsWyJsb2FkT3JkZXIiXT0xMSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ0YmwyYXNuLzI1LjgiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2lu;' export '_ModuleTable008_;' '_ModuleTable009_=Zm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNzZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29sbGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJh;' export '_ModuleTable009_;' '_ModuleTable010_=bGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==;' export '_ModuleTable010_;' '_ModuleTable_Sz_=10;' export '_ModuleTable_Sz_;'
+++ BLASTDATA_ROOT=/sw/data/blast_databases
+++ export BLASTDATA_ROOT
+++ BLASTDB=/sw/data/blast_databases
+++ export BLASTDB
+++ BLASTPLUSDIR=/sw/bioinfo/blast/2.11.0+/snowy/bin
+++ export BLASTPLUSDIR
+++ BLAST_DOC=/sw/bioinfo/blast/2.11.0+/snowy/doc
+++ export BLAST_DOC
+++ BLAST_ROOT=/sw/bioinfo/blast/2.11.0+/snowy
+++ export BLAST_ROOT
+++ HMMER_HOME=/sw/apps/bioinfo/hmmer/3.1b2/snowy
+++ export HMMER_HOME
+++ __LMOD_REF_COUNT_LD_LIBRARY_PATH='/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:1;/sw/comp/perl_modules/5.24.1/snowy/lib:1'
+++ export __LMOD_REF_COUNT_LD_LIBRARY_PATH
+++ LD_LIBRARY_PATH=/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib:/sw/comp/perl_modules/5.24.1/snowy/lib
+++ export LD_LIBRARY_PATH
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1;gnuparallel/20170122:1;perl/5.24.1:1;perl_modules/5.24.1:1;BioPerl/1.7.1_Perl5.24.1:1;blast_databases/latest:1;blast/2.11.0+:1;hmmer/3.1b2:1;aragorn/1.2.38:1;prodigal/2.6.3:1;tbl2asn/25.8:1;SignalP/4.1f:1;barrnap/0.8:1;minced/0.2.0:1;prokka/1.45-5b58020:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:gnuparallel/20170122:perl/5.24.1:perl_modules/5.24.1:BioPerl/1.7.1_Perl5.24.1:blast_databases/latest:blast/2.11.0+:hmmer/3.1b2:aragorn/1.2.38:prodigal/2.6.3:tbl2asn/25.8:SignalP/4.1f:barrnap/0.8:minced/0.2.0:prokka/1.45-5b58020
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MANPATH='/sw/bioinfo/prokka/1.45-5b58020/snowy/man:1;/sw/bioinfo/SignalP/4.1f/snowy/man:1;/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:1;/sw/comp/perl/5.24.1/snowy/man:1;/sw/parallel/gnuparallel/20170122/snowy/share/man:1;/usr/share/man:2;/sw/uppmax/man:2;/opt/thinlinc/share/man:2;/sw/comp/perl_modules/5.24.1/snowy/man:1;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:1;/sw/apps/bioinfo/hmmer/3.1b2/snowy/man:1'
+++ export __LMOD_REF_COUNT_MANPATH
+++ MANPATH=/sw/bioinfo/prokka/1.45-5b58020/snowy/man:/sw/bioinfo/SignalP/4.1f/snowy/man:/sw/apps/bioinfo/aragorn/1.2.38/snowy/man:/sw/comp/perl/5.24.1/snowy/man:/sw/parallel/gnuparallel/20170122/snowy/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.24.1/snowy/man:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/man:/sw/apps/bioinfo/hmmer/3.1b2/snowy/man
+++ export MANPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:1;/sw/apps/bioinfo/minced/0.2.0/snowy:1;/sw/bioinfo/barrnap/0.8/snowy/bin:1;/sw/bioinfo/SignalP/4.1f/snowy:1;/sw/bioinfo/tbl2asn/25.8/snowy:1;/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:1;/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:1;/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:1;/sw/bioinfo/blast/2.11.0+/snowy/bin:1;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:1;/sw/comp/perl_modules/5.24.1/snowy/bin:1;/sw/comp/perl/5.24.1/snowy/bin:1;/sw/parallel/gnuparallel/20170122/snowy/bin:1;/home/erikpa/bin:2;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/prokka/1.45-5b58020/snowy/bin:/sw/apps/bioinfo/minced/0.2.0/snowy:/sw/bioinfo/barrnap/0.8/snowy/bin:/sw/bioinfo/SignalP/4.1f/snowy:/sw/bioinfo/tbl2asn/25.8/snowy:/sw/apps/bioinfo/prodigal/2.6.3/snowy/bin:/sw/apps/bioinfo/aragorn/1.2.38/snowy/bin:/sw/apps/bioinfo/hmmer/3.1b2/snowy/bin:/sw/bioinfo/blast/2.11.0+/snowy/bin:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/bin:/sw/comp/perl_modules/5.24.1/snowy/bin:/sw/comp/perl/5.24.1/snowy/bin:/sw/parallel/gnuparallel/20170122/snowy/bin:/home/erikpa/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sw/uppmax/bin
+++ export PATH
+++ __LMOD_REF_COUNT_PERL5LIB='/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5:1;/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:1;/sw/comp/perl_modules/5.24.1/snowy/lib/perl5:1;/sw/comp/perl_modules/5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:1;/sw/comp/perl/5.24.1/snowy/lib:1'
+++ export __LMOD_REF_COUNT_PERL5LIB
+++ PERL5LIB=/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5:/sw/bioinfo/BioPerl/1.7.1_Perl5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl_modules/5.24.1/snowy/lib/perl5:/sw/comp/perl_modules/5.24.1/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.24.1/snowy/lib
+++ export PERL5LIB
+++ SIGNALP_ROOT=/sw/bioinfo/SignalP/4.1f/snowy
+++ export SIGNALP_ROOT
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/parallel/gnuparallel/20170122:1;/sw/mf/snowy/compilers/perl/5.24.1:1;/sw/mf/snowy/compilers/perl_modules/5.24.1:1;/sw/mf/snowy/bioinfo-tools/misc/BioPerl/1.7.1_Perl5.24.1:1;/sw/mf/snowy/data/blast_databases/latest:1;/sw/mf/snowy/bioinfo-tools/alignment/blast/2.11.0+:1;/sw/mf/snowy/bioinfo-tools/alignment/hmmer/3.1b2:1;/sw/mf/snowy/bioinfo-tools/alignment/aragorn/1.2.38:1;/sw/mf/snowy/bioinfo-tools/misc/prodigal/2.6.3:1;/sw/mf/snowy/bioinfo-tools/misc/tbl2asn/25.8:1;/sw/mf/snowy/bioinfo-tools/annotation/SignalP/4.1f:1;/sw/mf/snowy/bioinfo-tools/alignment/barrnap/0.8:1;/sw/mf/snowy/bioinfo-tools/alignment/minced/0.2.0:1;/sw/mf/snowy/bioinfo-tools/annotation/prokka/1.45-5b58020:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/parallel/gnuparallel/20170122:/sw/mf/snowy/compilers/perl/5.24.1:/sw/mf/snowy/compilers/perl_modules/5.24.1:/sw/mf/snowy/bioinfo-tools/misc/BioPerl/1.7.1_Perl5.24.1:/sw/mf/snowy/data/blast_databases/latest:/sw/mf/snowy/bioinfo-tools/alignment/blast/2.11.0+:/sw/mf/snowy/bioinfo-tools/alignment/hmmer/3.1b2:/sw/mf/snowy/bioinfo-tools/alignment/aragorn/1.2.38:/sw/mf/snowy/bioinfo-tools/misc/prodigal/2.6.3:/sw/mf/snowy/bioinfo-tools/misc/tbl2asn/25.8:/sw/mf/snowy/bioinfo-tools/annotation/SignalP/4.1f:/sw/mf/snowy/bioinfo-tools/alignment/barrnap/0.8:/sw/mf/snowy/bioinfo-tools/alignment/minced/0.2.0:/sw/mf/snowy/bioinfo-tools/annotation/prokka/1.45-5b58020
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtCaW9QZXJsPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvQmlvUGVybC8xLjcuMV9QZXJsNS4yNC4xIixbImZ1bGxOYW1lIl09IkJpb1BlcmwvMS43LjFfUGVybDUuMjQuMSIsWyJsb2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IkJpb1BlcmwvMS43LjFfUGVybDUuMjQuMSIsfSxTaWduYWxQPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24vU2lnbmFsUC80
+++ export _ModuleTable001_
+++ _ModuleTable002_=LjFmIixbImZ1bGxOYW1lIl09IlNpZ25hbFAvNC4xZiIsWyJsb2FkT3JkZXIiXT0xMixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJTaWduYWxQLzQuMWYiLH0sYXJhZ29ybj17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQvYXJhZ29ybi8xLjIuMzgiLFsiZnVsbE5hbWUiXT0iYXJhZ29ybi8xLjIuMzgiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJhcmFnb3JuLzEuMi4zOCIsfSxiYXJybmFwPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2FsaWdubWVudC9iYXJybmFwLzAu
+++ export _ModuleTable002_
+++ _ModuleTable003_=OCIsWyJmdWxsTmFtZSJdPSJiYXJybmFwLzAuOCIsWyJsb2FkT3JkZXIiXT0xMyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiYXJybmFwLzAuOCIsfSxbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxibGFzdD17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQvYmxhc3QvMi4xMS4wKyIsWyJmdWxs
+++ export _ModuleTable003_
+++ _ModuleTable004_=TmFtZSJdPSJibGFzdC8yLjExLjArIixbImxvYWRPcmRlciJdPTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmxhc3QvMi4xMS4wKyIsfSxibGFzdF9kYXRhYmFzZXM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2RhdGEvYmxhc3RfZGF0YWJhc2VzL2xhdGVzdCIsWyJmdWxsTmFtZSJdPSJibGFzdF9kYXRhYmFzZXMvbGF0ZXN0IixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MixbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmxhc3RfZGF0YWJhc2VzL2xhdGVzdCIsfSxnbnVwYXJhbGxlbD17WyJmbiJdPSIvc3cvbWYvc25vd3kvcGFyYWxsZWwvZ251cGFyYWxsZWwvMjAxNzAx
+++ export _ModuleTable004_
+++ _ModuleTable005_=MjIiLFsiZnVsbE5hbWUiXT0iZ251cGFyYWxsZWwvMjAxNzAxMjIiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJnbnVwYXJhbGxlbC8yMDE3MDEyMiIsfSxobW1lcj17WyJmbiJdPSIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQvaG1tZXIvMy4xYjIiLFsiZnVsbE5hbWUiXT0iaG1tZXIvMy4xYjIiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJobW1lci8zLjFiMiIsfSxtaW5jZWQ9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50L21pbmNlZC8w
+++ export _ModuleTable005_
+++ _ModuleTable006_=LjIuMCIsWyJmdWxsTmFtZSJdPSJtaW5jZWQvMC4yLjAiLFsibG9hZE9yZGVyIl09MTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWluY2VkLzAuMi4wIix9LHBlcmw9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsLzUuMjQuMSIsWyJmdWxsTmFtZSJdPSJwZXJsLzUuMjQuMSIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0zLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsLzUuMjQuMSIsfSxwZXJsX21vZHVsZXM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsX21vZHVsZXMvNS4yNC4xIixbImZ1bGxO
+++ export _ModuleTable006_
+++ _ModuleTable007_=YW1lIl09InBlcmxfbW9kdWxlcy81LjI0LjEiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsX21vZHVsZXMvNS4yNC4xIix9LHByb2RpZ2FsPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvcHJvZGlnYWwvMi42LjMiLFsiZnVsbE5hbWUiXT0icHJvZGlnYWwvMi42LjMiLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHJvZGlnYWwvMi42LjMiLH0scHJva2thPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24vcHJva2thLzEuNDUt
+++ export _ModuleTable007_
+++ _ModuleTable008_=NWI1ODAyMCIsWyJmdWxsTmFtZSJdPSJwcm9ra2EvMS40NS01YjU4MDIwIixbImxvYWRPcmRlciJdPTE1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InByb2trYSIsfSx0YmwyYXNuPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvdGJsMmFzbi8yNS44IixbImZ1bGxOYW1lIl09InRibDJhc24vMjUuOCIsWyJsb2FkT3JkZXIiXT0xMSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ0YmwyYXNuLzI1LjgiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2lu
+++ export _ModuleTable008_
+++ _ModuleTable009_=Zm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNzZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29sbGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJh
+++ export _ModuleTable009_
+++ _ModuleTable010_=bGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==
+++ export _ModuleTable010_
+++ _ModuleTable_Sz_=10
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ cd /scratch/6209352/output
++ prokka /scratch/6209352/Assembled_data/CP002919.1.fa
+[13:50:38] This is prokka 1.14.6
+[13:50:38] Written by Torsten Seemann <torsten.seemann@gmail.com>
+[13:50:38] Homepage is https://github.com/tseemann/prokka
+[13:50:38] Local time is Sat May 14 13:50:38 2022
+[13:50:38] You are erikpa
+[13:50:38] Operating system is linux
+[13:50:38] You have BioPerl 1.007001
+[13:50:38] System has 16 cores.
+[13:50:38] Will use maximum of 8 cores.
+[13:50:38] Annotating as >>> Bacteria <<<
+[13:50:38] Generating locus_tag from '/scratch/6209352/Assembled_data/CP002919.1.fa' contents.
+[13:50:38] Setting --locustag DCIKNHNO from MD5 dc2471785304665b83186af37615aafa
+[13:50:38] Creating new output folder: PROKKA_05142022
+[13:50:38] Running: mkdir -p PROKKA_05142022
+[13:50:38] Using filename prefix: PROKKA_05142022.XXX
+[13:50:38] Setting HMMER_NCPU=1
+[13:50:38] Writing log to: PROKKA_05142022/PROKKA_05142022.log
+[13:50:38] Command: /sw/bioinfo/prokka/1.45-5b58020/snowy/bin/prokka /scratch/6209352/Assembled_data/CP002919.1.fa
+[13:50:38] Appending to PATH: /sw/bioinfo/prokka/1.45-5b58020/rackham/bin/../binaries/linux
+[13:50:38] Appending to PATH: /sw/bioinfo/prokka/1.45-5b58020/rackham/bin/../binaries/linux/../common
+[13:50:38] Appending to PATH: /sw/bioinfo/prokka/1.45-5b58020/rackham/bin
+[13:50:38] Looking for 'aragorn' - found /sw/bioinfo/prokka/1.45-5b58020/rackham/bin/../binaries/linux/aragorn
+[13:50:38] Determined aragorn version is 001002 from 'ARAGORN v1.2.38 Dean Laslett'
+[13:50:38] Looking for 'barrnap' - found /sw/bioinfo/barrnap/0.8/snowy/bin/barrnap
+[13:50:38] Determined barrnap version is 000008 from 'barrnap 0.8'
+[13:50:38] Looking for 'blastp' - found /sw/bioinfo/blast/2.11.0+/snowy/bin/blastp
+[13:50:39] Determined blastp version is 002011 from 'blastp: 2.11.0+'
+[13:50:39] Looking for 'cmpress' - found /sw/bioinfo/prokka/1.45-5b58020/rackham/bin/../binaries/linux/cmpress
+[13:50:39] Determined cmpress version is 001001 from '# INFERNAL 1.1.2 (July 2016)'
+[13:50:39] Looking for 'cmscan' - found /sw/bioinfo/prokka/1.45-5b58020/rackham/bin/../binaries/linux/cmscan
+[13:50:39] Determined cmscan version is 001001 from '# INFERNAL 1.1.2 (July 2016)'
+[13:50:39] Looking for 'egrep' - found /usr/bin/egrep
+[13:50:39] Looking for 'find' - found /usr/bin/find
+[13:50:39] Looking for 'grep' - found /usr/bin/grep
+[13:50:39] Looking for 'hmmpress' - found /sw/apps/bioinfo/hmmer/3.1b2/snowy/bin/hmmpress
+[13:50:39] Determined hmmpress version is 003001 from '# HMMER 3.1b2 (February 2015); http://hmmer.org/'
+[13:50:39] Looking for 'hmmscan' - found /sw/apps/bioinfo/hmmer/3.1b2/snowy/bin/hmmscan
+[13:50:39] Determined hmmscan version is 003001 from '# HMMER 3.1b2 (February 2015); http://hmmer.org/'
+[13:50:40] Looking for 'java' - found /usr/bin/java
+[13:50:40] Looking for 'makeblastdb' - found /sw/bioinfo/blast/2.11.0+/snowy/bin/makeblastdb
+[13:50:41] Determined makeblastdb version is 002011 from 'makeblastdb: 2.11.0+'
+[13:50:41] Looking for 'minced' - found /sw/apps/bioinfo/minced/0.2.0/snowy/minced
+[13:50:42] Determined minced version is 002000 from 'minced 0.2.0'
+[13:50:42] Looking for 'parallel' - found /sw/parallel/gnuparallel/20170122/snowy/bin/parallel
+[13:50:42] Determined parallel version is 20170122 from 'GNU parallel 20170122'
+[13:50:42] Looking for 'prodigal' - found /sw/apps/bioinfo/prodigal/2.6.3/snowy/bin/prodigal
+[13:50:42] Determined prodigal version is 002006 from 'Prodigal V2.6.3: February, 2016'
+[13:50:42] Looking for 'prokka-genbank_to_fasta_db' - found /sw/bioinfo/prokka/1.45-5b58020/snowy/bin/prokka-genbank_to_fasta_db
+[13:50:42] Looking for 'sed' - found /usr/bin/sed
+[13:50:42] Looking for 'signalp' - found /sw/bioinfo/SignalP/4.1f/snowy/signalp
+[13:50:42] Determined signalp version is 004001 from '4.1 6209352'
+[13:50:42] Looking for 'tbl2asn' - found /sw/bioinfo/tbl2asn/25.8/snowy/tbl2asn
+[13:50:42] Determined tbl2asn version is 025008 from 'tbl2asn 25.8   arguments:'
+[13:50:42] Using genetic code table 11.
+[13:50:42] Loading and checking input file: /scratch/6209352/Assembled_data/CP002919.1.fa
+[13:50:42] Wrote 1 contigs totalling 2406157 bp.
+[13:50:42] Predicting tRNAs and tmRNAs
+[13:50:42] Running: aragorn -l -gc11  -w PROKKA_05142022\/PROKKA_05142022\.fna
+[13:50:44] 1 tmRNA [12139,12497] 90,119 ANEELALAA*
+[13:50:44] 2 tRNA-Leu [64004,64087] 34 (gag)
+[13:50:44] 3 tRNA-Pro [86846,86922] 35 (tgg)
+[13:50:44] 4 tRNA-Met c[155857,155933] 35 (cat)
+[13:50:44] 5 tRNA-Ser c[165954,166043] 35 (cga)
+[13:50:44] 6 tRNA-Ser [167954,168039] 35 (tga)
+[13:50:44] 7 tRNA-Ser [168058,168150] 35 (gct)
+[13:50:44] 8 tRNA-Ser c[173597,173689] 35 (gga)
+[13:50:44] 9 tRNA-Leu c[296079,296165] 35 (caa)
+[13:50:44] 10 tRNA-Cys c[374573,374647] 33 (gca)
+[13:50:44] 11 tRNA-Arg [375428,375504] 35 (tcg)
+[13:50:44] 12 tRNA-His [394656,394730] 33 (gtg)
+[13:50:44] 13 tRNA-Arg [408504,408580] 35 (acg)
+[13:50:44] 14 tRNA-Met [450053,450128] 34 (cat)
+[13:50:44] 15 tRNA-Leu c[520552,520637] 34 (cag)
+[13:50:44] 16 tRNA-Arg c[547330,547406] 35 (tct)
+[13:50:44] 17 tRNA-Lys c[640677,640752] 34 (ttt)
+[13:50:44] 18 tRNA-Glu c[757960,758037] 37 (ttc)
+[13:50:44] 19 tRNA-Ala [808919,808994] 34 (ggc)
+[13:50:44] 20 tRNA-Gly [913554,913628] 33 (ccc)
+[13:50:44] 21 tRNA-Thr [993743,993818] 34 (tgt)
+[13:50:44] 22 tRNA-Val c[1091053,1091128] 34 (tac)
+[13:50:44] 23 tRNA-Asp [1091725,1091801] 35 (gtc)
+[13:50:44] 24 tRNA-Thr [1104105,1104179] 33 (cgt)
+[13:50:44] 25 tRNA-Phe c[1149202,1149277] 34 (gaa)
+[13:50:44] 26 tRNA-Pro [1227047,1227123] 35 (ggg)
+[13:50:44] 27 tRNA-Arg c[1277265,1277341] 35 (cct)
+[13:50:44] 28 tRNA-Ile [1295822,1295898] 35 (gat)
+[13:50:44] 29 tRNA-Ala [1295904,1295979] 34 (tgc)
+[13:50:44] 30 tRNA-Ala c[1366013,1366088] 34 (tgc)
+[13:50:44] 31 tRNA-Ile c[1366094,1366170] 35 (gat)
+[13:50:44] 32 tRNA-Pro c[1411391,1411467] 35 (cgg)
+[13:50:44] 33 tRNA-Trp c[1531161,1531237] 35 (cca)
+[13:50:44] 34 tRNA-Thr c[1532736,1532811] 34 (ggt)
+[13:50:44] 35 tRNA-Gly c[1532835,1532909] 33 (tcc)
+[13:50:44] 36 tRNA-Tyr c[1532947,1533032] 35 (gta)
+[13:50:44] 37 tRNA-Leu c[1535289,1535374] 34 (tag)
+[13:50:44] 38 tRNA-Gln c[1545211,1545285] 33 (ttg)
+[13:50:44] 39 tRNA-Arg [1581709,1581786] 36 (ccg)
+[13:50:44] 40 tRNA-Asn [1893502,1893577] 34 (gtt)
+[13:50:44] 41 tRNA-Gly [1911415,1911489] 33 (gcc)
+[13:50:44] 42 tRNA-Lys c[1940100,1940175] 34 (ctt)
+[13:50:44] 43 tRNA-Ala c[2018504,2018579] 34 (cgc)
+[13:50:44] 44 tRNA-Glu [2059191,2059266] 35 (ctc)
+[13:50:44] 45 tRNA-Leu [2065113,2065199] 35 (taa)
+[13:50:44] 46 tRNA-Met c[2099707,2099781] 33 (cat)
+[13:50:44] 47 tRNA-Gln [2147618,2147691] 33 (ctg)
+[13:50:44] 48 tRNA-Val c[2285268,2285342] 33 (gac)
+[13:50:44] 49 tRNA-Val c[2344513,2344587] 33 (cac)
+[13:50:44] Found 49 tRNAs
+[13:50:44] Predicting Ribosomal RNAs
+[13:50:44] Running Barrnap with 8 threads
+[13:50:46] 1 CP002919.1 1294175 16S ribosomal RNA
+[13:50:46] 2 CP002919.1 1296116 23S ribosomal RNA
+[13:50:46] 3 CP002919.1 1299169 5S ribosomal RNA
+[13:50:46] 4 CP002919.1 1362714 5S ribosomal RNA
+[13:50:46] 5 CP002919.1 1362900 23S ribosomal RNA
+[13:50:46] 6 CP002919.1 1366261 16S ribosomal RNA
+[13:50:46] Found 6 rRNAs
+[13:50:46] Skipping ncRNA search, enable with --rfam if desired.
+[13:50:46] Total of 54 tRNA + rRNA features
+[13:50:46] Searching for CRISPR repeats
+[13:50:47] Found 0 CRISPRs
+[13:50:47] Predicting coding sequences
+[13:50:47] Contigs total 2406157 bp, so using single mode
+[13:50:47] Running: prodigal -i PROKKA_05142022\/PROKKA_05142022\.fna -c -m -g 11 -p single -f sco -q
+[13:50:51] Excluding CDS which overlaps existing RNA (tRNA) at CP002919.1:167702..168202 on + strand
+[13:50:51] Excluding CDS which overlaps existing RNA (tRNA) at CP002919.1:374426..374689 on + strand
+[13:50:51] Excluding CDS which overlaps existing RNA (tRNA) at CP002919.1:520617..520748 on - strand
+[13:50:52] Excluding CDS which overlaps existing RNA (tRNA) at CP002919.1:639660..640682 on + strand
+[13:50:52] Excluding CDS which overlaps existing RNA (tRNA) at CP002919.1:1091119..1091601 on - strand
+[13:50:52] Excluding CDS which overlaps existing RNA (tRNA) at CP002919.1:1226715..1227056 on + strand
+[13:50:52] Excluding CDS which overlaps existing RNA (rRNA) at CP002919.1:1299091..1301007 on + strand
+[13:50:53] Excluding CDS which overlaps existing RNA (tRNA) at CP002919.1:2147660..2147794 on - strand
+[13:50:53] Found 2350 CDS
+[13:50:53] Connecting features back to sequences
+[13:50:53] Not using genus-specific database. Try --usegenus to enable it.
+[13:50:53] Annotating CDS, please be patient.
+[13:50:53] Will use 8 CPUs for similarity searching.
+[13:50:55] There are still 2350 unannotated CDS left (started with 2350)
+[13:50:55] Will use blast to search against /sw/bioinfo/prokka/1.45-5b58020/rackham/db/kingdom/Bacteria/IS with 8 CPUs
+[13:50:55] Running: cat PROKKA_05142022\/PROKKA_05142022\.IS\.tmp\.8218\.faa | parallel --gnu --plain -j 8 --block 46107 --recstart '>' --pipe blastp -query - -db /sw/bioinfo/prokka/1.45-5b58020/rackham/db/kingdom/Bacteria/IS -evalue 1e-30 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_05142022\/PROKKA_05142022\.IS\.tmp\.8218\.blast 2> /dev/null
+[13:51:27] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.IS.tmp.8218.faa
+[13:51:27] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.IS.tmp.8218.blast
+[13:51:29] There are still 2317 unannotated CDS left (started with 2350)
+[13:51:29] Will use blast to search against /sw/bioinfo/prokka/1.45-5b58020/rackham/db/kingdom/Bacteria/AMR with 8 CPUs
+[13:51:29] Running: cat PROKKA_05142022\/PROKKA_05142022\.AMR\.tmp\.8218\.faa | parallel --gnu --plain -j 8 --block 45371 --recstart '>' --pipe blastp -query - -db /sw/bioinfo/prokka/1.45-5b58020/rackham/db/kingdom/Bacteria/AMR -evalue 9.99999999999999e-301 -qcov_hsp_perc 90 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_05142022\/PROKKA_05142022\.AMR\.tmp\.8218\.blast 2> /dev/null
+[13:51:53] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.AMR.tmp.8218.faa
+[13:51:53] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.AMR.tmp.8218.blast
+[13:51:55] There are still 2317 unannotated CDS left (started with 2350)
+[13:51:55] Will use blast to search against /sw/bioinfo/prokka/1.45-5b58020/rackham/db/kingdom/Bacteria/sprot with 8 CPUs
+[13:51:55] Running: cat PROKKA_05142022\/PROKKA_05142022\.sprot\.tmp\.8218\.faa | parallel --gnu --plain -j 8 --block 45371 --recstart '>' --pipe blastp -query - -db /sw/bioinfo/prokka/1.45-5b58020/rackham/db/kingdom/Bacteria/sprot -evalue 1e-09 -qcov_hsp_perc 80 -num_threads 1 -num_descriptions 1 -num_alignments 1 -seg no > PROKKA_05142022\/PROKKA_05142022\.sprot\.tmp\.8218\.blast 2> /dev/null
+[13:53:55] Modify product: Uncharacterized protein Rv2008c => putative protein
+[13:53:55] Modify product: UPF0060 membrane protein YnfA => hypothetical protein
+[13:53:55] Modify product: Probable alcohol dehydrogenase AdhA => putative alcohol dehydrogenase AdhA
+[13:53:55] Modify product: Cyclic di-GMP phosphodiesterase PA4108 => Cyclic di-GMP phosphodiesterase
+[13:53:55] Modify product: Probable lipid II flippase MurJ => putative lipid II flippase MurJ
+[13:53:55] Modify product: Uncharacterized zinc protease Rv2782c => putative zinc protease
+[13:53:55] Modify product: Uncharacterized zinc protease Rv2782c => putative zinc protease
+[13:53:55] Modify product: UPF0098 protein YbcL => hypothetical protein
+[13:53:55] Modify product: Putative phosphoribosyl transferase Rv0571c => Putative phosphoribosyl transferase
+[13:53:55] Modify product: Protein aq_1857 => Protein
+[13:53:55] Modify product: UPF0053 protein Rv2366c => hypothetical protein
+[13:53:55] Modify product: Uncharacterized protein NMB0459 => putative protein
+[13:53:56] Modify product: Probable peptidoglycan glycosyltransferase FtsW => putative peptidoglycan glycosyltransferase FtsW
+[13:53:56] Modify product: Uncharacterized protein Rv1352 => putative protein
+[13:53:56] Modify product: Probable adenylyltransferase/sulfurtransferase MoeZ => putative adenylyltransferase/sulfurtransferase MoeZ
+[13:53:56] Modify product: Uncharacterized AAA domain-containing protein Rv2559c => putative AAA domain-containing protein
+[13:53:56] Modify product: Probable Fe(2+)-trafficking protein => putative Fe(2+)-trafficking protein
+[13:53:56] Modify product: Cyclic di-GMP phosphodiesterase PA4108 => Cyclic di-GMP phosphodiesterase
+[13:53:56] Modify product: Uncharacterized protein YbiB => putative protein YbiB
+[13:53:56] Modify product: Nucleoid-associated protein Cthe_2143 => Nucleoid-associated protein
+[13:53:56] Modify product: Uncharacterized oxidoreductase YciK => putative oxidoreductase YciK
+[13:53:56] Modify product: Sulfurtransferase Alvin_2599 => Sulfurtransferase
+[13:53:56] Modify product: Probable glycine dehydrogenase (decarboxylating) subunit 1 => putative glycine dehydrogenase (decarboxylating) subunit 1
+[13:53:56] Modify product: Probable glycine dehydrogenase (decarboxylating) subunit 2 => putative glycine dehydrogenase (decarboxylating) subunit 2
+[13:53:56] Modify product: Uncharacterized oxidoreductase SA2266 => putative oxidoreductase
+[13:53:56] Modify product: Uncharacterized protein HI_0073 => putative protein
+[13:53:56] Modify product: Uncharacterized MFS-type transporter Rv2456c => putative MFS-type transporter
+[13:53:56] Modify product: Probable nicotinate-nucleotide pyrophosphorylase [carboxylating] => putative nicotinate-nucleotide pyrophosphorylase [carboxylating]
+[13:53:56] Modify product: Nucleotide-binding protein SA0720 => Nucleotide-binding protein
+[13:53:56] Modify product: Probable multidrug resistance protein EmrK => putative multidrug resistance protein EmrK
+[13:53:56] Modify product: Uncharacterized protein YccU => putative protein YccU
+[13:53:56] Modify product: Uncharacterized signaling protein PA1727 => putative signaling protein
+[13:53:56] Modify product: Ribonuclease TTHA0252 => Ribonuclease
+[13:53:56] Modify product: GTP-binding protein TypA/BipA homolog => GTP-binding protein TypA/BipA 
+[13:53:56] Modify product: Uncharacterized zinc protease Rv2782c => putative zinc protease
+[13:53:56] Modify product: UPF0109 protein Rv2908c => hypothetical protein
+[13:53:56] Modify product: UPF0182 protein MSMEG_1959/MSMEI_1915 => hypothetical protein
+[13:53:56] Modify product: UPF0056 inner membrane protein YhgN => hypothetical protein
+[13:53:56] Modify product: Probable ABC transporter-binding protein DR_1571 => putative ABC transporter-binding protein
+[13:53:56] Modify product: Uncharacterized signaling protein PA1727 => putative signaling protein
+[13:53:56] Modify product: Probable multidrug ABC transporter permease YbhR => putative multidrug ABC transporter permease YbhR
+[13:53:56] Modify product: Probable multidrug ABC transporter permease YbhS => putative multidrug ABC transporter permease YbhS
+[13:53:56] Modify product: Probable multidrug ABC transporter ATP-binding protein YbhF => putative multidrug ABC transporter ATP-binding protein YbhF
+[13:53:56] Modify product: UPF0194 membrane protein YbhG => hypothetical protein
+[13:53:57] Modify product: UPF0413 protein YjbH => hypothetical protein
+[13:53:57] Modify product: Uncharacterized ABC transporter ATP-binding protein Rv0986 => putative ABC transporter ATP-binding protein
+[13:53:57] Modify product: Probable bifunctional transcriptional activator/DNA repair enzyme AlkA => putative bifunctional transcriptional activator/DNA repair enzyme AlkA
+[13:53:57] Modify product: Uncharacterized protein Rv2411c => putative protein
+[13:53:57] Modify product: Probable transcriptional regulatory protein DVU_2259 => putative transcriptional regulatory protein
+[13:53:57] Modify product: Bifunctional protein FolD => Bifunctional protein FolD protein
+[13:53:57] Modify product: UPF0701 protein HI_0467 => hypothetical protein
+[13:53:57] Modify product: Uncharacterized amino acid permease YhdG => putative amino acid permease YhdG
+[13:53:57] Modify product: Uncharacterized oxidoreductase Rv0484c => putative oxidoreductase
+[13:53:57] Modify product: Probable murein peptide carboxypeptidase => putative murein peptide carboxypeptidase
+[13:53:57] Modify product: Phage shock protein A homolog => Phage shock protein A 
+[13:53:57] Modify product: Uncharacterized MFS-type transporter Rv2456c => putative MFS-type transporter
+[13:53:57] Modify product: Glycogen operon protein GlgX homolog => Glycogen operon protein GlgX 
+[13:53:57] Modify product: Cyclic di-GMP phosphodiesterase PA4108 => Cyclic di-GMP phosphodiesterase
+[13:53:57] Modify product: Putative glutamine amidotransferase Rv2859c => Putative glutamine amidotransferase
+[13:53:57] Modify product: Uncharacterized ABC transporter ATP-binding protein YheS => putative ABC transporter ATP-binding protein YheS
+[13:53:57] Modify product: Bifunctional protein Rv2228c => Bifunctional protein
+[13:53:57] Modify product: Uncharacterized protein YqeY => putative protein YqeY
+[13:53:57] Modify product: Phosphate-specific transport system accessory protein PhoU homolog => Phosphate-specific transport system accessory protein PhoU 
+[13:53:57] Modify product: UPF0045 protein Rv1898 => hypothetical protein
+[13:53:57] Modify product: Probable protein kinase UbiB => putative protein kinase UbiB
+[13:53:57] Modify product: UPF0758 protein YsxA => hypothetical protein
+[13:53:57] Modify product: Uncharacterized ABC transporter ATP-binding protein YknY => putative ABC transporter ATP-binding protein YknY
+[13:53:57] Modify product: Probable ribonucleotide transport ATP-binding protein mkl => putative ribonucleotide transport ATP-binding protein mkl
+[13:53:57] Modify product: Protease HtpX homolog => Protease HtpX 
+[13:53:57] Modify product: 1,4-alpha-glucan branching enzyme TTHA1902 => 1,4-alpha-glucan branching enzyme
+[13:53:57] Modify product: Uncharacterized peptidase SA1530 => putative peptidase
+[13:53:57] Modify product: Probable GTP-binding protein EngB => putative GTP-binding protein EngB
+[13:53:57] Modify product: UPF0324 inner membrane protein YeiH => hypothetical protein
+[13:53:57] Modify product: Uncharacterized protein Rv1829 => putative protein
+[13:53:57] Modify product: Uncharacterized protein Rv1488 => putative protein
+[13:53:57] Modify product: Probable multidrug resistance protein EmrY => putative multidrug resistance protein EmrY
+[13:53:57] Modify product: Probable cystine transporter YijE => putative cystine transporter YijE
+[13:53:57] Modify product: UPF0234 protein XC_3703 => hypothetical protein
+[13:53:58] Modify product: Uncharacterized HTH-type transcriptional regulator YusO => putative HTH-type transcriptional regulator YusO
+[13:53:58] Cleaned 79 /product names
+[13:53:58] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.sprot.tmp.8218.faa
+[13:53:58] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.sprot.tmp.8218.blast
+[13:53:59] There are still 1382 unannotated CDS left (started with 2350)
+[13:53:59] Will use hmmer3 to search against /sw/bioinfo/prokka/1.45-5b58020/rackham/db/hmm/HAMAP.hmm with 8 CPUs
+[13:53:59] Running: cat PROKKA_05142022\/PROKKA_05142022\.HAMAP\.hmm\.tmp\.8218\.faa | parallel --gnu --plain -j 8 --block 23996 --recstart '>' --pipe hmmscan --noali --notextw --acc -E 1e-09 --cpu 1 /sw/bioinfo/prokka/1.45-5b58020/rackham/db/hmm/HAMAP.hmm /dev/stdin > PROKKA_05142022\/PROKKA_05142022\.HAMAP\.hmm\.tmp\.8218\.hmmer3 2> /dev/null
+[13:55:01] Modify product: Uncharacterized MFS-type transporter YfcJ => putative MFS-type transporter YfcJ
+[13:55:01] Cleaned 1 /product names
+[13:55:01] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.HAMAP.hmm.tmp.8218.faa
+[13:55:01] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.HAMAP.hmm.tmp.8218.hmmer3
+[13:55:01] Labelling remaining 1146 proteins as 'hypothetical protein'
+[13:55:01] Possible /pseudo 'Peptidoglycan-associated lipoprotein' at CP002919.1 position 143908
+[13:55:01] Possible /pseudo 'IS1595 family transposase ISUnCu23' at CP002919.1 position 285154
+[13:55:01] Possible /pseudo 'IS1595 family transposase ISUnCu23' at CP002919.1 position 286362
+[13:55:01] Possible /pseudo 'putative zinc protease' at CP002919.1 position 415366
+[13:55:01] Possible /pseudo 'Trehalose synthase/amylase TreS' at CP002919.1 position 660425
+[13:55:01] Possible /pseudo 'D-inositol-3-phosphate glycosyltransferase' at CP002919.1 position 718370
+[13:55:01] Possible /pseudo 'D-inositol-3-phosphate glycosyltransferase' at CP002919.1 position 720328
+[13:55:01] Possible /pseudo 'Cell division protein FtsZ' at CP002919.1 position 788462
+[13:55:01] Possible /pseudo 'NADPH-Fe(3+) oxidoreductase subunit alpha' at CP002919.1 position 875929
+[13:55:01] Possible /pseudo 'Thiosulfate dehydrogenase' at CP002919.1 position 915588
+[13:55:01] Possible /pseudo 'Isocitrate dehydrogenase [NADP]' at CP002919.1 position 1148415
+[13:55:01] Possible /pseudo '3-deoxy-D-manno-octulosonic acid transferase' at CP002919.1 position 1162021
+[13:55:01] Possible /pseudo 'Lipopolysaccharide heptosyltransferase 1' at CP002919.1 position 1167290
+[13:55:01] Possible /pseudo 'Glutamate synthase [NADPH] large chain' at CP002919.1 position 1407306
+[13:55:01] Possible /pseudo 'Elongation factor G' at CP002919.1 position 1515876
+[13:55:01] Possible /pseudo 'Flagellar basal-body rod protein FlgG' at CP002919.1 position 2191558
+[13:55:01] Possible /pseudo 'Thymidylate kinase' at CP002919.1 position 2212467
+[13:55:01] Possible /pseudo 'Thiol-disulfide oxidoreductase ResA' at CP002919.1 position 2221876
+[13:55:01] Possible /pseudo 'Cobalamin biosynthesis bifunctional protein CbiET' at CP002919.1 position 2376874
+[13:55:01] Possible /pseudo 'Hopanoid C-3 methylase' at CP002919.1 position 2389961
+[13:55:01] Found 922 unique /gene codes.
+[13:55:01] Fixed 2 duplicate /gene - icd_1 icd_2
+[13:55:01] Fixed 2 duplicate /gene - hup_1 hup_2
+[13:55:01] Fixed 4 duplicate /gene - recD2_1 recD2_2 recD2_3 recD2_4
+[13:55:01] Fixed 2 duplicate /gene - emrA_1 emrA_2
+[13:55:01] Fixed 6 duplicate /gene - czcA_1 czcA_2 czcA_3 czcA_4 czcA_5 czcA_6
+[13:55:01] Fixed 2 duplicate /gene - pgsA_1 pgsA_2
+[13:55:01] Fixed 2 duplicate /gene - auaH_1 auaH_2
+[13:55:01] Fixed 2 duplicate /gene - lnrL_1 lnrL_2
+[13:55:01] Fixed 4 duplicate /gene - pal_1 pal_2 pal_3 pal_4
+[13:55:01] Fixed 2 duplicate /gene - hpnR_1 hpnR_2
+[13:55:01] Fixed 2 duplicate /gene - gltB_1 gltB_2
+[13:55:01] Fixed 2 duplicate /gene - ccoN1_1 ccoN1_2
+[13:55:01] Fixed 2 duplicate /gene - pcrA_1 pcrA_2
+[13:55:01] Fixed 6 duplicate /gene - sasA_1 sasA_2 sasA_3 sasA_4 sasA_5 sasA_6
+[13:55:01] Fixed 2 duplicate /gene - gtaB_1 gtaB_2
+[13:55:01] Fixed 2 duplicate /gene - pstS1_1 pstS1_2
+[13:55:01] Fixed 2 duplicate /gene - petC_1 petC_2
+[13:55:01] Fixed 2 duplicate /gene - iolS_1 iolS_2
+[13:55:01] Fixed 2 duplicate /gene - glnG_1 glnG_2
+[13:55:01] Fixed 2 duplicate /gene - prcB_1 prcB_2
+[13:55:01] Fixed 2 duplicate /gene - cysG_1 cysG_2
+[13:55:01] Fixed 2 duplicate /gene - thrC_1 thrC_2
+[13:55:01] Fixed 2 duplicate /gene - ndhK_1 ndhK_2
+[13:55:01] Fixed 6 duplicate /gene - atoC_1 atoC_2 atoC_3 atoC_4 atoC_5 atoC_6
+[13:55:01] Fixed 2 duplicate /gene - cusA_1 cusA_2
+[13:55:01] Fixed 4 duplicate /gene - rcsC_1 rcsC_2 rcsC_3 rcsC_4
+[13:55:01] Fixed 2 duplicate /gene - leuC_1 leuC_2
+[13:55:01] Fixed 2 duplicate /gene - petB_1 petB_2
+[13:55:01] Fixed 2 duplicate /gene - prcA_1 prcA_2
+[13:55:01] Fixed 2 duplicate /gene - mlaE_1 mlaE_2
+[13:55:01] Fixed 2 duplicate /gene - treS_1 treS_2
+[13:55:01] Fixed 2 duplicate /gene - arsB_1 arsB_2
+[13:55:01] Fixed 2 duplicate /gene - Hgd_1 Hgd_2
+[13:55:01] Fixed 4 duplicate /gene - cusB_1 cusB_2 cusB_3 cusB_4
+[13:55:01] Fixed 6 duplicate /gene - mdtA_1 mdtA_2 mdtA_3 mdtA_4 mdtA_5 mdtA_6
+[13:55:01] Fixed 2 duplicate /gene - tufA_1 tufA_2
+[13:55:01] Fixed 3 duplicate /gene - mdtC_1 mdtC_2 mdtC_3
+[13:55:01] Fixed 2 duplicate /gene - farB_1 farB_2
+[13:55:01] Fixed 2 duplicate /gene - hisB_1 hisB_2
+[13:55:01] Fixed 2 duplicate /gene - sfrA_1 sfrA_2
+[13:55:01] Fixed 2 duplicate /gene - lexA_1 lexA_2
+[13:55:01] Fixed 2 duplicate /gene - hag_1 hag_2
+[13:55:01] Fixed 2 duplicate /gene - sqr_1 sqr_2
+[13:55:01] Fixed 2 duplicate /gene - glnB_1 glnB_2
+[13:55:01] Fixed 2 duplicate /gene - rnc_1 rnc_2
+[13:55:01] Fixed 2 duplicate /gene - hddC_1 hddC_2
+[13:55:01] Fixed 2 duplicate /gene - priA_1 priA_2
+[13:55:01] Fixed 2 duplicate /gene - nsrR_1 nsrR_2
+[13:55:01] Fixed 2 duplicate /gene - def_1 def_2
+[13:55:01] Fixed 2 duplicate /gene - nhaK_1 nhaK_2
+[13:55:01] Fixed 2 duplicate /gene - gph_1 gph_2
+[13:55:01] Fixed 2 duplicate /gene - phoP_1 phoP_2
+[13:55:01] Fixed 2 duplicate /gene - dppB_1 dppB_2
+[13:55:01] Fixed 2 duplicate /gene - lpxA_1 lpxA_2
+[13:55:01] Fixed 2 duplicate /gene - IMPDH_1 IMPDH_2
+[13:55:01] Fixed 2 duplicate /gene - cmpR_1 cmpR_2
+[13:55:01] Fixed 2 duplicate /gene - dnaJ_1 dnaJ_2
+[13:55:01] Fixed 2 duplicate /gene - rny_1 rny_2
+[13:55:01] Fixed 3 duplicate /gene - dop_1 dop_2 dop_3
+[13:55:01] Fixed 2 duplicate /gene - iscS_1 iscS_2
+[13:55:01] Fixed 2 duplicate /gene - glmS_1 glmS_2
+[13:55:01] Fixed 3 duplicate /gene - tmk_1 tmk_2 tmk_3
+[13:55:01] Fixed 2 duplicate /gene - gpmA_1 gpmA_2
+[13:55:01] Fixed 3 duplicate /gene - ilvD_1 ilvD_2 ilvD_3
+[13:55:01] Fixed 7 duplicate /gene - norR_1 norR_2 norR_3 norR_4 norR_5 norR_6 norR_7
+[13:55:01] Fixed 2 duplicate /gene - cbiET_1 cbiET_2
+[13:55:01] Fixed 2 duplicate /gene - tam_1 tam_2
+[13:55:01] Fixed 8 duplicate /gene - xerC_1 xerC_2 xerC_3 xerC_4 xerC_5 xerC_6 xerC_7 xerC_8
+[13:55:01] Fixed 2 duplicate /gene - tolB_1 tolB_2
+[13:55:01] Fixed 2 duplicate /gene - ftsZ_1 ftsZ_2
+[13:55:01] Fixed 2 duplicate /gene - merA_1 merA_2
+[13:55:01] Fixed 2 duplicate /gene - fabH_1 fabH_2
+[13:55:01] Fixed 2 duplicate /gene - ccsA_1 ccsA_2
+[13:55:01] Fixed 3 duplicate /gene - COQ5_1 COQ5_2 COQ5_3
+[13:55:01] Fixed 2 duplicate /gene - arsC_1 arsC_2
+[13:55:01] Fixed 2 duplicate /gene - dksA_1 dksA_2
+[13:55:01] Fixed 5 duplicate /gene - cpoB_1 cpoB_2 cpoB_3 cpoB_4 cpoB_5
+[13:55:01] Fixed 2 duplicate /gene - dinG_1 dinG_2
+[13:55:01] Fixed 3 duplicate /gene - gloB_1 gloB_2 gloB_3
+[13:55:01] Fixed 2 duplicate /gene - cydA_1 cydA_2
+[13:55:01] Fixed 2 duplicate /gene - rapA_1 rapA_2
+[13:55:01] Fixed 2 duplicate /gene - nanM_1 nanM_2
+[13:55:01] Fixed 2 duplicate /gene - glgX_1 glgX_2
+[13:55:01] Fixed 2 duplicate /gene - uvrB_1 uvrB_2
+[13:55:01] Fixed 2 duplicate /gene - proP_1 proP_2
+[13:55:01] Fixed 2 duplicate /gene - sucC_1 sucC_2
+[13:55:01] Fixed 4 duplicate /gene - ndhB_1 ndhB_2 ndhB_3 ndhB_4
+[13:55:01] Fixed 2 duplicate /gene - lapB_1 lapB_2
+[13:55:01] Fixed 5 duplicate /gene - resA_1 resA_2 resA_3 resA_4 resA_5
+[13:55:01] Fixed 2 duplicate /gene - xerD_1 xerD_2
+[13:55:01] Fixed 2 duplicate /gene - flgG_1 flgG_2
+[13:55:01] Fixed 2 duplicate /gene - lon_1 lon_2
+[13:55:01] Fixed 2 duplicate /gene - tolC_1 tolC_2
+[13:55:01] Fixed 2 duplicate /gene - dnaK_1 dnaK_2
+[13:55:01] Fixed 6 duplicate /gene - mshA_1 mshA_2 mshA_3 mshA_4 mshA_5 mshA_6
+[13:55:01] Fixed 3 duplicate /gene - hcf136_1 hcf136_2 hcf136_3
+[13:55:01] Fixed 2 duplicate /gene - waaA_1 waaA_2
+[13:55:01] Fixed 2 duplicate /gene - sucD_1 sucD_2
+[13:55:01] Fixed 2 duplicate /gene - tolQ_1 tolQ_2
+[13:55:01] Fixed 2 duplicate /gene - rfaC_1 rfaC_2
+[13:55:01] Fixed 2 duplicate /gene - wbgU_1 wbgU_2
+[13:55:01] Fixed 6 duplicate /gene - bepA_1 bepA_2 bepA_3 bepA_4 bepA_5 bepA_6
+[13:55:01] Fixed 3 duplicate /gene - tsdA_1 tsdA_2 tsdA_3
+[13:55:01] Fixed 2 duplicate /gene - fdx_1 fdx_2
+[13:55:01] Fixed 104 colliding /gene names.
+[13:55:01] Adding /locus_tag identifiers
+[13:55:01] Assigned 2405 locus_tags to CDS and RNA features.
+[13:55:01] Writing outputs to PROKKA_05142022/
+[13:55:04] Generating annotation statistics file
+[13:55:04] Generating Genbank and Sequin files
+[13:55:04] Running: tbl2asn -V b -a r10k -l paired-ends -M n -N 1 -y 'Annotated using prokka 1.14.6 from https://github.com/tseemann/prokka' -Z PROKKA_05142022\/PROKKA_05142022\.err -i PROKKA_05142022\/PROKKA_05142022\.fsa 2> /dev/null
+[13:55:08] Deleting unwanted file: PROKKA_05142022/errorsummary.val
+[13:55:08] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.dr
+[13:55:08] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.fixedproducts
+[13:55:08] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.ecn
+[13:55:08] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.val
+[13:55:08] Repairing broken .GBK output that tbl2asn produces...
+[13:55:08] Running: sed 's/COORDINATES: profile/COORDINATES:profile/' < PROKKA_05142022\/PROKKA_05142022\.gbf > PROKKA_05142022\/PROKKA_05142022\.gbk
+[13:55:09] Deleting unwanted file: PROKKA_05142022/PROKKA_05142022.gbf
+[13:55:09] Output files:
+[13:55:09] PROKKA_05142022/PROKKA_05142022.txt
+[13:55:09] PROKKA_05142022/PROKKA_05142022.faa
+[13:55:09] PROKKA_05142022/PROKKA_05142022.tbl
+[13:55:09] PROKKA_05142022/PROKKA_05142022.gff
+[13:55:09] PROKKA_05142022/PROKKA_05142022.sqn
+[13:55:09] PROKKA_05142022/PROKKA_05142022.log
+[13:55:09] PROKKA_05142022/PROKKA_05142022.fna
+[13:55:09] PROKKA_05142022/PROKKA_05142022.fsa
+[13:55:09] PROKKA_05142022/PROKKA_05142022.gbk
+[13:55:09] PROKKA_05142022/PROKKA_05142022.ffn
+[13:55:09] PROKKA_05142022/PROKKA_05142022.tsv
+[13:55:09] PROKKA_05142022/PROKKA_05142022.err
+[13:55:09] Annotation finished successfully.
+[13:55:09] Walltime used: 4.52 minutes
+[13:55:09] If you use this result please cite the Prokka paper:
+[13:55:09] Seemann T (2014) Prokka: rapid prokaryotic genome annotation. Bioinformatics. 30(14):2068-9.
+[13:55:09] Type 'prokka --citation' for more details.
+[13:55:09] Share and enjoy!
++ cp -r /scratch/6209352/output/PROKKA_05142022 /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_ref_6209352

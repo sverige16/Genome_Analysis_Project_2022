@@ -1,8 +1,6 @@
-Final Code
-Annotation_Prooka
-Assembl.sh
-RNA_PreProcessing_FastQC
-RNA_PostProcessing_FastQC
-Quality_Control_Quast
-Synteny_Comparison
-Trimming_Raw_Reads_Trimmomatic
+####Explanation of the name of the code (in order)#####
+Number: Order in which the analysis was done
+.5: An analysis adjacent to the analysis in question
+Text: What the analysis does
+Tool: tools used
+

@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 00:10:00
-#SBATCH -J Prokka_Apr19
+#SBATCH -J Prokka_May14th
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
@@ -25,7 +25,7 @@ mkdir Assembled_data
 mkdir output
 
 # copying multiple files to external directory
-cp  /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Assembled_data
+cp /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Assembled_data
 
 # Load modules
 module load bioinfo-tools

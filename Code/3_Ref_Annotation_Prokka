@@ -4,7 +4,7 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 00:10:00
-#SBATCH -J Prokka_May6th
+#SBATCH -J Prokka_reference_May14th
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user erikspencereverett@gmail.com
 
@@ -13,8 +13,8 @@ set -x
 echo QOS = $SLURM_JOB_QOS
 
 # make new directory for Prokka output files
-mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_$SLURM_JOB_ID
-cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_$SLURM_JOB_ID
+mkdir /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_ref_$SLURM_JOB_ID
+cd /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_ref_$SLURM_JOB_ID
 
 # copying multiple files to external directory
 export SRCDIR=$HOME
@@ -25,7 +25,7 @@ mkdir Assembled_data
 mkdir output
 
 # copying multiple files to external directory
-cp  /home/erikpa/Genome_Analysis_Project_2022/Data/assembled_L.ferri_1_4.contigs.fasta $SNIC_TMP/Assembled_data
+cp /home/erikpa/Genome_Analysis_Project_2022/Data/CP002919.1.fa $SNIC_TMP/Assembled_data
 
 # Load modules
 module load bioinfo-tools
@@ -36,4 +36,4 @@ cd $SNIC_TMP/output
 prokka $SNIC_TMP/Assembled_data/*
 
 # Returning to external storage
-cp -r $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_$SLURM_JOB_ID
+cp -r $SNIC_TMP/output/* /home/erikpa/Genome_Analysis_Project_2022/Analysis/Prokka_ref_$SLURM_JOB_ID
